@@ -1,0 +1,106 @@
+{
+  "categories": [
+    {
+      "slug": "wine-holder",
+      "name": "Wine Holders",
+      "description": "Keep your wine bottles stylishly stored with our custom wine holders",
+      "image": "images/products/2025-12-03_b7e85145197c2.webp"
+    },
+    {
+      "slug": "mini-shoes",
+      "name": "Shoe Keyrings",
+      "description": "Shoe keyrings featuring miniature versions of popular sneaker designs",
+      "image": "images/products/af1-keyring.webp"
+    }
+  ],
+  "products": [
+     {
+      "id": "prod-001",
+      "name": "Dragon Wine Holder",
+      "description": "A fabulous Dragon wine holder that holds a standard wine bottle. Perfect for fantasy enthusiasts and wine lovers alike.",
+      "categorySlug": "wine-holder",
+      "price": 10.00,
+      "currency": "EUR",
+      "images": [
+        "/images/products/2025-12-03_b7e85145197c2.webp"
+      ],
+      "featured": true,
+      "tags": ["wine", "dragon", "fantasy", "holder", "decor"],
+      "materialOptions": [
+        {
+          "id": "pla",
+          "name": "PLA",
+          "description": "Eco-friendly biodegradable plastic",
+          "priceModifier": 0
+        },
+        {
+          "id": "petg",
+          "name": "PETG",
+          "description": "Durable and impact-resistant",
+          "priceModifier": 3
+        },
+        {
+          "id": "resin",
+          "name": "Resin",
+          "description": "High-detail premium finish",
+          "priceModifier": 5
+        }
+      ],
+      "colorOptions": [
+        { "id": "black", "name": "Obsidian Black", "hexCode": "#1a1a1a", "priceModifier": 0 },
+        { "id": "silver", "name": "Metallic Silver", "hexCode": "#94a3b8", "priceModifier": 2 },
+        { "id": "gold", "name": "Dragon Gold", "hexCode": "#fbbf24", "priceModifier": 3 },
+        { "id": "red", "name": "Crimson Red", "hexCode": "#dc2626", "priceModifier": 2 }
+      ],
+      "sizeOptions": [
+        { "id": "standard", "name": "Standard Bottle", "dimensions": "Fits 750ml wine bottles", "priceModifier": 0 }
+      ],
+      "leadTimeDaysMin": 3,
+      "leadTimeDaysMax": 5,
+      "rating": 0,
+      "reviewCount": 0,
+      "sku": "GD-WIN-001"
+    },
+    {
+      "id": "prod-002",
+      "name": "AF1 Mini Keyring",
+      "description": "Miniature Nike Air Force 1 sneaker keychain with detailed design. Features authentic sneaker details including laces, swoosh logo, and textured sole. Perfect accessory for sneaker enthusiasts and collectors.",
+      "categorySlug": "mini-shoes",
+      "price": 5.00,
+      "currency": "EUR",
+      "images": [
+        "/images/products/af1-keyring.webp"
+      ],
+      "featured": true,
+      "tags": ["keychain", "sneaker", "miniature", "collectible"],
+      "materialOptions": [
+        {
+          "id": "pla",
+          "name": "PLA",
+          "description": "Eco-friendly biodegradable plastic",
+          "priceModifier": 0
+        },
+        {
+          "id": "resin",
+          "name": "Resin",
+          "description": "High-detail premium finish",
+          "priceModifier": 2
+        }
+      ],
+      "colorOptions": [
+        { "id": "white-black", "name": "White/Black", "hexCode": "#f5f5f5", "priceModifier": 0 },
+        { "id": "black", "name": "All Black", "hexCode": "#1a1a1a", "priceModifier": 0 },
+        { "id": "red", "name": "White/Red", "hexCode": "#dc2626", "priceModifier": 0 }
+      ],
+      "sizeOptions": [
+        { "id": "mini", "name": "Mini Keychain", "dimensions": "4cm x 3cm x 2cm", "priceModifier": 0 }
+      ],
+      "leadTimeDaysMin": 2,
+      "leadTimeDaysMax": 4,
+      "rating": 0,
+      "reviewCount": 0,
+      "sku": "GD-AF1-001"
+    }
+    
+  ]
+}

@@ -1,0 +1,55 @@
+Subject: Order Confirmation - {ORDER_REFERENCE} - GELO's Designs
+
+Dear {CUSTOMER_NAME},
+
+Thank you for your order request! We're excited to bring your custom 3D printed items to life.
+
+ORDER DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Order Reference: {ORDER_REFERENCE}
+Order Date: {ORDER_DATE}
+
+Customer Information:
+• Name: {CUSTOMER_NAME}
+• Email: {CUSTOMER_EMAIL}
+• Phone: {CUSTOMER_PHONE}
+
+Shipping Address:
+{SHIPPING_ADDRESS}
+{CITY} {ZIP_CODE}
+Cyprus
+
+Items Ordered:
+{ITEMS_LIST}
+
+Order Total: {TOTAL_AMOUNT}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEXT STEPS:
+1. We will review your order and prepare your items for production
+2. Estimated production time: {LEAD_TIME} business days
+3. Once ready, we'll arrange delivery via ACS courier
+4. The ACS courier will deliver to your address and collect payment
+5. Payment is Cash on Delivery (cash only) - €3 delivery charge included
+
+PAYMENT & DELIVERY INFORMATION:
+• Delivery via: ACS Courier Service
+• Payment Method: Cash on Delivery (COD)
+• Delivery Charge: €3.00 (included in total)
+• Payment: Cash only - pay the courier upon delivery
+• Production begins immediately after order confirmation
+
+IMPORTANT: Please have the exact cash amount ready when the ACS courier arrives with your order.
+
+If you have any questions or need to make changes to your order, please reply to this email or contact us at:
+📧 Email: nkaikitis04@gmail.com
+📱 Phone: [Your Phone Number]
+
+Thank you for choosing GELO's Designs! We look forward to creating something amazing for you.
+
+Best regards,
+GELO's Designs Team
+Cyprus
+
+---
+This is an automated confirmation. Please do not reply to this email if you wish to make changes - contact us directly using the information above.
