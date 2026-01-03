@@ -4,7 +4,7 @@ import { usePageMetadata } from '../hooks/usePageMetadata';
 import { useCart } from '../context/CartContext';
 import Button from '../components/Button';
 import { formatPrice, generateOrderReference } from '../utils/helpers';
-import { CustomerInfo, ShippingAddress, DeliveryMethod, CartItem } from '../types';
+import { CustomerInfo, ShippingAddress, CartItem } from '../types';
 import { logAnalyticsEvent } from '../utils/analytics';
 
 // Fixed ACS delivery charge

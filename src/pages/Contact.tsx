@@ -15,7 +15,6 @@ export default function Contact() {
     subject: '',
     message: '',
   });
-  const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
