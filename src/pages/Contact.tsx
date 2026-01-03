@@ -15,6 +15,7 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,6 +25,8 @@ export default function Contact() {
       showToast('Please fill in all required fields', 'error');
       return;
     }
+
+    setSubmitting(true);
 
     // Generate email body
     const emailBody = `
@@ -44,6 +47,8 @@ ${formData.message}
     
     // Clear form
     setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    setSubmitting(false);
   };
 
   return (
