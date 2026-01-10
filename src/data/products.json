@@ -1,6 +1,12 @@
 {
   "categories": [
     {
+      "slug": "lithophanes",
+      "name": "Custom Lithophanes",
+      "description": "Personalized 3D printed lithophanes from your photos",
+      "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23e5e7eb' width='600' height='400'/%3E%3Ctext fill='%236b7280' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ECustom Lithophanes%3C/text%3E%3C/svg%3E"
+    },
+    {
       "slug": "wine-holder",
       "name": "Wine Holders",
       "description": "Keep your wine bottles stylishly stored with our custom wine holders",
@@ -14,52 +20,73 @@
     }
   ],
   "products": [
-     {
-      "id": "prod-001",
-      "name": "Dragon Wine Holder",
-      "description": "A fabulous Dragon wine holder that holds a standard wine bottle. Perfect for fantasy enthusiasts and wine lovers alike.",
-      "categorySlug": "wine-holder",
-      "price": 10.00,
+    {
+      "id": "prod-lithophane",
+      "name": "Custom Photo Lithophane",
+      "description": "Transform your favorite photos into stunning 3D printed lithophanes. These unique art pieces reveal beautiful images when backlit, creating a magical display perfect for home decor or as a personalized gift.",
+      "categorySlug": "lithophanes",
+      "price": 13.00,
       "currency": "EUR",
       "images": [
-        "/images/products/2025-12-03_b7e85145197c2.webp"
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23e5e7eb' width='400' height='400'/%3E%3Ctext fill='%236b7280' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ELithophane Example%3C/text%3E%3C/svg%3E"
       ],
       "featured": true,
-      "tags": ["wine", "dragon", "fantasy", "holder", "decor"],
+      "tags": ["lithophane", "photo", "custom", "gift", "personalized", "backlight"],
+      "customizable": true,
+      "customUrl": "/custom-lithophane",
       "materialOptions": [
         {
-          "id": "pla",
-          "name": "PLA",
-          "description": "Eco-friendly biodegradable plastic",
+          "id": "pla-white",
+          "name": "White PLA",
+          "description": "Best for lithophanes - allows light to pass through",
           "priceModifier": 0
-        },
-        {
-          "id": "petg",
-          "name": "PETG",
-          "description": "Durable and impact-resistant",
-          "priceModifier": 3
-        },
-        {
-          "id": "resin",
-          "name": "Resin",
-          "description": "High-detail premium finish",
-          "priceModifier": 5
         }
       ],
       "colorOptions": [
-        { "id": "black", "name": "Obsidian Black", "hexCode": "#1a1a1a", "priceModifier": 0 },
-        { "id": "silver", "name": "Metallic Silver", "hexCode": "#94a3b8", "priceModifier": 2 },
-        { "id": "gold", "name": "Dragon Gold", "hexCode": "#fbbf24", "priceModifier": 3 },
-        { "id": "red", "name": "Crimson Red", "hexCode": "#dc2626", "priceModifier": 2 }
+        { "id": "white", "name": "White", "hexCode": "#ffffff", "priceModifier": 0 }
       ],
       "sizeOptions": [
-        { "id": "standard", "name": "Standard Bottle", "dimensions": "Fits 750ml wine bottles", "priceModifier": 0 }
+        { "id": "standard", "name": "Standard", "dimensions": "15cm × 15cm", "priceModifier": 0 }
       ],
-      "leadTimeDaysMin": 3,
-      "leadTimeDaysMax": 5,
+      "leadTimeDaysMin": 5,
+      "leadTimeDaysMax": 10,
       "rating": 0,
       "reviewCount": 0,
-      "sku": "GD-WIN-001"
+      "sku": "LD-LITH-001"
+    },
+    {
+      "id": "prod-lithophane-keyring",
+      "name": "Lithophane Keyring",
+      "description": "Carry your memories everywhere! Compact lithophane keyring featuring your favorite photo. A perfect personalized accessory or gift that you can take with you wherever you go.",
+      "categorySlug": "lithophanes",
+      "price": 4.00,
+      "currency": "EUR",
+      "images": [
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23f59e0b' width='400' height='400'/%3E%3Ctext fill='%23ffffff' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EKeyring Lithophane%3C/text%3E%3C/svg%3E"
+      ],
+      "featured": true,
+      "tags": ["lithophane", "keyring", "photo", "custom", "gift", "personalized", "portable"],
+      "customizable": true,
+      "customUrl": "/custom-lithophane",
+      "materialOptions": [
+        {
+          "id": "pla-white",
+          "name": "White PLA",
+          "description": "Best for lithophanes - allows light to pass through",
+          "priceModifier": 0
+        }
+      ],
+      "colorOptions": [
+        { "id": "white", "name": "White", "hexCode": "#ffffff", "priceModifier": 0 }
+      ],
+      "sizeOptions": [
+        { "id": "keyring", "name": "Keyring Size", "dimensions": "4cm × 5cm", "priceModifier": 0 }
+      ],
+      "leadTimeDaysMin": 5,
+      "leadTimeDaysMax": 10,
+      "rating": 0,
+      "reviewCount": 0,
+      "sku": "LD-LITH-KEY-001"
     },
     {
       "id": "prod-002",

@@ -17,6 +17,8 @@ export interface Product {
   rating: number;
   reviewCount: number;
   sku: string;
+  customizable?: boolean;
+  customUrl?: string;
 }
 
 export interface MaterialOption {

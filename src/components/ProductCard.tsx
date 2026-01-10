@@ -82,7 +82,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </Link>
 
         <div className="p-4">
-          <Link to={`/product/${product.id}`}>
+          <Link to={product.customUrl || `/product/${product.id}`}>
             <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2">
               {product.name}
             </h3>
@@ -124,20 +124,33 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
 
           <div className="mt-4 flex gap-2">
-            <Button
-              onClick={handleQuickAdd}
-              className="flex-1"
-              size="sm"
-            >
-              Quick Add
-            </Button>
-            <Button
-              onClick={() => setQuickViewOpen(true)}
-              variant="outline"
-              size="sm"
-            >
-              Quick View
-            </Button>
+            {product.customizable ? (
+              <Link to={product.customUrl || `/product/${product.id}`} className="flex-1">
+                <Button
+                  className="w-full"
+                  size="sm"
+                >
+                  Customize Now
+                </Button>
+              </Link>
+            ) : (
+              <>
+                <Button
+                  onClick={handleQuickAdd}
+                  className="flex-1"
+                  size="sm"
+                >
+                  Quick Add
+                </Button>
+                <Button
+                  onClick={() => setQuickViewOpen(true)}
+                  variant="outline"
+                  size="sm"
+                >
+                  Quick View
+                </Button>
+              </>
+            )}
           </div>
         </div>
       </div>
