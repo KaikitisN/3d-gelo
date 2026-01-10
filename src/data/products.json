@@ -7,12 +7,6 @@
       "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23e5e7eb' width='600' height='400'/%3E%3Ctext fill='%236b7280' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ECustom Lithophanes%3C/text%3E%3C/svg%3E"
     },
     {
-      "slug": "wine-holder",
-      "name": "Wine Holders",
-      "description": "Keep your wine bottles stylishly stored with our custom wine holders",
-      "image": "images/products/2025-12-03_b7e85145197c2.webp"
-    },
-    {
       "slug": "mini-shoes",
       "name": "Shoe Keyrings",
       "description": "Shoe keyrings featuring miniature versions of popular sneaker designs",
@@ -30,7 +24,7 @@
       "images": [
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23e5e7eb' width='400' height='400'/%3E%3Ctext fill='%236b7280' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ELithophane Example%3C/text%3E%3C/svg%3E"
       ],
-      "featured": true,
+      "featured": false,
       "tags": ["lithophane", "photo", "custom", "gift", "personalized", "backlight"],
       "customizable": true,
       "customUrl": "/custom-lithophane",
@@ -64,7 +58,7 @@
       "images": [
         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23f59e0b' width='400' height='400'/%3E%3Ctext fill='%23ffffff' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EKeyring Lithophane%3C/text%3E%3C/svg%3E"
       ],
-      "featured": true,
+      "featured": false,
       "tags": ["lithophane", "keyring", "photo", "custom", "gift", "personalized", "portable"],
       "customizable": true,
       "customUrl": "/custom-lithophane",
