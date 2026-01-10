@@ -34,7 +34,7 @@ export default function CustomLithophane() {
     try {
       // Calculate price based on size
       const prices: Record<string, number> = {
-        keyring: 8,
+        keyring: 4,
         lithophane: 13,
       };
       const songPrice = formData.addSong ? 2 : 0;
@@ -164,14 +164,14 @@ Note: Delivery charge (€3) will be added to final price.
               <div className="space-y-2 text-sm text-gray-700">
                 <div className="flex justify-between">
                   <span>• Keyring (4cm × 5cm):</span>
-                  <span className="font-semibold">€8</span>
+                  <span className="font-semibold">€4</span>
                 </div>
                 <div className="flex justify-between">
                   <span>• Lithophane (15cm × 15cm):</span>
                   <span className="font-semibold">€13</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>• Add Song Option:</span>
+                  <span>• Add Song Option (Lithophane only):</span>
                   <span className="font-semibold">+€2</span>
                 </div>
               </div>
@@ -253,30 +253,32 @@ Note: Delivery charge (€3) will be added to final price.
                   id="size"
                   required
                   value={formData.size}
-                  onChange={(e) => setFormData({ ...formData, size: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, size: e.target.value, addSong: e.target.value === 'keyring' ? false : formData.addSong })}
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   <option value="lithophane">Lithophane (15cm × 15cm) - €13</option>
-                  <option value="keyring">Keyring (4cm × 5cm) - €8</option>
+                  <option value="keyring">Keyring (4cm × 5cm) - €4</option>
                 </select>
               </div>
 
-              <div>
-                <label className="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={formData.addSong}
-                    onChange={(e) => setFormData({ ...formData, addSong: e.target.checked })}
-                    className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-2 focus:ring-primary-500"
-                  />
-                  <span className="text-sm font-medium text-gray-700">
-                    Add Spotify Song Code (+€2)
-                  </span>
-                </label>
-                <p className="text-xs text-gray-500 mt-1 ml-7">
-                  Include a scannable Spotify code for your favorite song on the lithophane
-                </p>
-              </div>
+              {formData.size === 'lithophane' && (
+                <div>
+                  <label className="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={formData.addSong}
+                      onChange={(e) => setFormData({ ...formData, addSong: e.target.checked })}
+                      className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-2 focus:ring-primary-500"
+                    />
+                    <span className="text-sm font-medium text-gray-700">
+                      Add Spotify Song Code (+€2)
+                    </span>
+                  </label>
+                  <p className="text-xs text-gray-500 mt-1 ml-7">
+                    Include a scannable Spotify code for your favorite song on the lithophane
+                  </p>
+                </div>
+              )}
 
               <div>
                 <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
@@ -316,9 +318,9 @@ Note: Delivery charge (€3) will be added to final price.
                   <strong>Estimated Price:</strong>{' '}
                   €
                   {(
-                    (formData.size === 'keyring' ? 8 : 13) *
+                    (formData.size === 'keyring' ? 4 : 13) *
                     parseInt(formData.quantity || '1') +
-                    (formData.addSong ? 2 : 0)
+                    (formData.addSong && formData.size === 'lithophane' ? 2 : 0)
                   ).toFixed(2)}
                 </p>
                 <p className="text-xs text-gray-500 mt-2">

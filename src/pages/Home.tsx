@@ -162,7 +162,7 @@ export default function Home() {
                 Carry your memories everywhere! Compact lithophane keyring with your photo
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-amber-600 font-bold">Only €8</span>
+                <span className="text-amber-600 font-bold">Only €4</span>
                 <span className="text-sm text-amber-600 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
                   Order Now →
                 </span>
