@@ -125,7 +125,7 @@ export default function Home() {
                 Transform your favorite photos into stunning 3D printed art pieces with backlighting
               </p>
               <div className="flex items-center justify-between">
-                <span className="text-primary-600 font-bold">From €15</span>
+                <span className="text-primary-600 font-bold">From €13</span>
                 <span className="text-sm text-primary-600 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
                   Customize Now →
                 </span>

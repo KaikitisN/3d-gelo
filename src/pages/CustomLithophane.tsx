@@ -13,8 +13,9 @@ export default function CustomLithophane() {
     name: '',
     email: '',
     phone: '',
-    size: 'medium',
+    size: 'lithophane',
     quantity: '1',
+    addSong: false,
     message: '',
   });
   const [submitting, setSubmitting] = useState(false);
@@ -34,11 +35,11 @@ export default function CustomLithophane() {
       // Calculate price based on size
       const prices: Record<string, number> = {
         keyring: 8,
-        small: 15,
-        medium: 25,
-        large: 40,
+        lithophane: 13,
       };
-      const price = prices[formData.size] * parseInt(formData.quantity);
+      const songPrice = formData.addSong ? 2 : 0;
+      const basePrice = prices[formData.size] * parseInt(formData.quantity);
+      const price = basePrice + songPrice;
 
       // Create email body with all order details
       const emailBody = `
@@ -54,8 +55,9 @@ Phone: ${formData.phone}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ORDER DETAILS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Size: ${formData.size.charAt(0).toUpperCase() + formData.size.slice(1)} (${formData.size === 'keyring' ? '4cm × 5cm Keyring' : formData.size === 'small' ? '10cm × 10cm' : formData.size === 'medium' ? '15cm × 15cm' : '20cm × 20cm'})
+Type: ${formData.size === 'keyring' ? 'Keyring (4cm × 5cm)' : 'Lithophane (15cm × 15cm)'}
 Quantity: ${formData.quantity}
+Add Song: ${formData.addSong ? 'Yes (+€2)' : 'No'}
 Estimated Price: €${price.toFixed(2)}
 
 ⚠️ IMPORTANT: Please attach your image file to this email before sending.
@@ -87,7 +89,7 @@ Note: Delivery charge (€3) will be added to final price.
       
       // Clear form after a delay
       setTimeout(() => {
-        setFormData({ name: '', email: '', phone: '', size: 'medium', quantity: '1', message: '' });
+        setFormData({ name: '', email: '', phone: '', size: 'lithophane', quantity: '1', addSong: false, message: '' });
         setSubmitting(false);
       }, 1000);
     } catch (error) {
@@ -158,23 +160,19 @@ Note: Delivery charge (€3) will be added to final price.
             </div>
 
             <div className="bg-blue-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-3">Size & Pricing</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">Pricing</h3>
               <div className="space-y-2 text-sm text-gray-700">
                 <div className="flex justify-between">
                   <span>• Keyring (4cm × 5cm):</span>
                   <span className="font-semibold">€8</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>• Small (10cm × 10cm):</span>
-                  <span className="font-semibold">€15</span>
+                  <span>• Lithophane (15cm × 15cm):</span>
+                  <span className="font-semibold">€13</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>• Medium (15cm × 15cm):</span>
-                  <span className="font-semibold">€25</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>• Large (20cm × 20cm):</span>
-                  <span className="font-semibold">€40</span>
+                  <span>• Add Song Option:</span>
+                  <span className="font-semibold">+€2</span>
                 </div>
               </div>
             </div>
@@ -249,7 +247,7 @@ Note: Delivery charge (€3) will be added to final price.
 
               <div>
                 <label htmlFor="size" className="block text-sm font-medium text-gray-700 mb-2">
-                  Size *
+                  Type *
                 </label>
                 <select
                   id="size"
@@ -258,11 +256,26 @@ Note: Delivery charge (€3) will be added to final price.
                   onChange={(e) => setFormData({ ...formData, size: e.target.value })}
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
+                  <option value="lithophane">Lithophane (15cm × 15cm) - €13</option>
                   <option value="keyring">Keyring (4cm × 5cm) - €8</option>
-                  <option value="small">Small (10cm × 10cm) - €15</option>
-                  <option value="medium">Medium (15cm × 15cm) - €25</option>
-                  <option value="large">Large (20cm × 20cm) - €40</option>
                 </select>
+              </div>
+
+              <div>
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={formData.addSong}
+                    onChange={(e) => setFormData({ ...formData, addSong: e.target.checked })}
+                    className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-2 focus:ring-primary-500"
+                  />
+                  <span className="text-sm font-medium text-gray-700">
+                    Add Spotify Song Code (+€2)
+                  </span>
+                </label>
+                <p className="text-xs text-gray-500 mt-1 ml-7">
+                  Include a scannable Spotify code for your favorite song on the lithophane
+                </p>
               </div>
 
               <div>
@@ -303,8 +316,9 @@ Note: Delivery charge (€3) will be added to final price.
                   <strong>Estimated Price:</strong>{' '}
                   €
                   {(
-                    (formData.size === 'keyring' ? 8 : formData.size === 'small' ? 15 : formData.size === 'medium' ? 25 : 40) *
-                    parseInt(formData.quantity || '1')
+                    (formData.size === 'keyring' ? 8 : 13) *
+                    parseInt(formData.quantity || '1') +
+                    (formData.addSong ? 2 : 0)
                   ).toFixed(2)}
                 </p>
                 <p className="text-xs text-gray-500 mt-2">
