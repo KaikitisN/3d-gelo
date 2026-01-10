@@ -15,6 +15,7 @@ const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const Policy = lazy(() => import('./pages/Policy'));
+const CustomLithophane = lazy(() => import('./pages/CustomLithophane'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/policies/:type" element={<Policy />} />
+            <Route path="/custom-lithophane" element={<CustomLithophane />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

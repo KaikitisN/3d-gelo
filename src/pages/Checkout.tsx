@@ -12,7 +12,7 @@ const ACS_DELIVERY_CHARGE = 3;
 
 export default function Checkout() {
   usePageMetadata({
-    title: 'Checkout - GELO\'s Designs',
+    title: 'Checkout - Light 3D',
     description: 'Complete your order request',
   });
 

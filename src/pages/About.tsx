@@ -2,8 +2,8 @@ import { usePageMetadata } from '../hooks/usePageMetadata';
 
 export default function About() {
   usePageMetadata({
-    title: 'About Us - GELO\'s Designs',
-    description: 'Learn about GELO\'s Designs and our commitment to quality 3D printed products.',
+    title: 'About Us - Light 3D',
+    description: 'Learn about Light 3D and our commitment to quality 3D printed products.',
   });
 
   return (
@@ -11,7 +11,7 @@ export default function About() {
       {/* Hero */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About GELO's Designs</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Light 3D</h1>
           <p className="text-xl text-primary-100">
             Crafting premium 3D printed products with passion and precision
           </p>
@@ -23,7 +23,7 @@ export default function About() {
         <div className="prose prose-lg max-w-none">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
           <p className="text-gray-700 mb-6">
-            GELO's Designs was founded with a simple mission: to make high-quality, custom 3D printed
+            Light 3D was founded with a simple mission: to make high-quality, custom 3D printed
             products accessible to everyone. What started as a hobby in a small workshop has grown into
             a passion-driven business dedicated to bringing your ideas to life.
           </p>

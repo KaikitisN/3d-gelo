@@ -1,4 +1,4 @@
-Subject: Order Confirmation - {ORDER_REFERENCE} - GELO's Designs
+Subject: Order Confirmation - {ORDER_REFERENCE} - Light 3D
 
 Dear {CUSTOMER_NAME},
 
@@ -45,10 +45,10 @@ If you have any questions or need to make changes to your order, please reply to
 📧 Email: nkaikitis04@gmail.com
 📱 Phone: [Your Phone Number]
 
-Thank you for choosing GELO's Designs! We look forward to creating something amazing for you.
+Thank you for choosing Light 3D! We look forward to creating something amazing for you.
 
 Best regards,
-GELO's Designs Team
+Light 3D Team
 Cyprus
 
 ---

@@ -1,4 +1,4 @@
-# GELO's Designs - 3D Printed Goods E-Shop
+# Light 3D - 3D Printed Goods E-Shop
 
 A production-quality React website for a 3D printed goods shop featuring catalog browsing, product customization, and order request checkout (no payment processing).
 
@@ -304,7 +304,7 @@ Replace `console.log` in `src/utils/analytics.ts` with your analytics service.
 
 ## 📄 License
 
-This project is provided as-is for GELO's Designs.
+This project is provided as-is for Light 3D.
 
 ## 🤝 Support
 
@@ -314,4 +314,4 @@ For questions or issues:
 
 ---
 
-**Built with ❤️ for GELO's Designs**
+**Built with ❤️ for Light 3D**

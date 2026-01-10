@@ -69,7 +69,7 @@ We're happy to exchange items for different colors, sizes, or materials within 1
 
 **Effective Date: January 1, 2026**
 
-GELO's Designs ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal information.
+Light 3D ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal information.
 
 ### Information We Collect
 
@@ -136,7 +136,7 @@ For privacy-related questions or requests:
 
 **Last Updated: January 1, 2026**
 
-Please read these Terms of Service ("Terms") carefully before using the GELO's Designs website and services.
+Please read these Terms of Service ("Terms") carefully before using the Light 3D website and services.
 
 ### Agreement to Terms
 
@@ -180,7 +180,7 @@ You may not:
 ### Intellectual Property
 
 **Our Content:**
-All content on our website (text, images, logos, designs) is owned by GELO's Designs and protected by copyright laws. You may not use our content without permission.
+All content on our website (text, images, logos, designs) is owned by Light 3D and protected by copyright laws. You may not use our content without permission.
 
 **Custom Designs:**
 When you request a custom design:
@@ -204,7 +204,7 @@ To the maximum extent permitted by law:
 
 ### Indemnification
 
-You agree to indemnify GELO's Designs from claims arising from:
+You agree to indemnify Light 3D from claims arising from:
 - Your violation of these Terms
 - Your use of our services
 - Your violation of any third-party rights
@@ -236,7 +236,7 @@ export default function Policy() {
   const policy = policies[type as keyof typeof policies];
 
   usePageMetadata({
-    title: `${policy?.title || 'Policy'} - GELO's Designs`,
+    title: `${policy?.title || 'Policy'} - Light 3D`,
     description: `Read our ${policy?.title.toLowerCase() || 'policy'}.`,
   });
 

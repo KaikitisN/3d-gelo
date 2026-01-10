@@ -5,8 +5,8 @@ import { showToast } from '../components/Toast';
 
 export default function Contact() {
   usePageMetadata({
-    title: 'Contact Us - GELO\'s Designs',
-    description: 'Get in touch with GELO\'s Designs for inquiries, custom orders, or support.',
+    title: 'Contact Us - Light 3D',
+    description: 'Get in touch with Light 3D for inquiries, custom orders, or support.',
   });
 
   const [formData, setFormData] = useState({

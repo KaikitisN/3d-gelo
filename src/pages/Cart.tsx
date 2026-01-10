@@ -7,7 +7,7 @@ import { showToast } from '../components/Toast';
 
 export default function Cart() {
   usePageMetadata({
-    title: 'Shopping Cart - GELO\'s Designs',
+    title: 'Shopping Cart - Light 3D',
     description: 'Review your cart items before checkout',
   });
 

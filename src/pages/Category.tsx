@@ -9,7 +9,7 @@ export default function Category() {
   const products = data.products.filter((p) => p.categorySlug === slug);
 
   usePageMetadata({
-    title: `${category?.name || 'Category'} - GELO's Designs`,
+    title: `${category?.name || 'Category'} - Light 3D`,
     description: category?.description || 'Browse products in this category',
   });
 

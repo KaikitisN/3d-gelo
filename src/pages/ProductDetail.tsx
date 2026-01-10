@@ -43,7 +43,7 @@ export default function ProductDetail() {
   }, [product]);
 
   usePageMetadata({
-    title: `${product?.name || 'Product'} - GELO's Designs`,
+    title: `${product?.name || 'Product'} - Light 3D`,
     description: product?.description || 'View product details',
     ogImage: product?.images[0],
   });

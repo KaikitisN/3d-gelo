@@ -9,7 +9,7 @@ const PRODUCTS_PER_PAGE = 12;
 
 export default function Shop() {
   usePageMetadata({
-    title: 'Shop All Products - GELO\'s Designs',
+    title: 'Shop All Products - Light 3D',
     description: 'Browse our complete collection of premium 3D printed products.',
   });
 

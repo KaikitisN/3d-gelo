@@ -91,8 +91,8 @@ const faqs = [
 
 export default function FAQ() {
   usePageMetadata({
-    title: 'FAQ - GELO\'s Designs',
-    description: 'Frequently asked questions about GELO\'s Designs products, orders, and services.',
+    title: 'FAQ - Light 3D',
+    description: 'Frequently asked questions about Light 3D products, orders, and services.',
   });
 
   const [openIndex, setOpenIndex] = useState<string | null>(null);

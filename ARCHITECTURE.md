@@ -1,8 +1,8 @@
-# GELO's Designs - Architecture & Implementation Overview
+# Light 3D - Architecture & Implementation Overview
 
 ## Executive Summary
 
-A complete, production-ready React e-commerce website for GELO's Designs, specializing in made-to-order 3D printed products. The site features a catalog-browsing experience with product customization and an order request checkout system (no payment processing at this stage).
+A complete, production-ready React e-commerce website for Light 3D, specializing in made-to-order 3D printed products. The site features a catalog-browsing experience with product customization and an order request checkout system (no payment processing at this stage).
 
 ---
 

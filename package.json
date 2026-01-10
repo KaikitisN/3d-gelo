@@ -1,5 +1,5 @@
 {
-  "name": "gelos-designs",
+  "name": "light3d",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "animejs": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

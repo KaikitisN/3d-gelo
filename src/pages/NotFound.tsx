@@ -3,7 +3,7 @@ import { usePageMetadata } from '../hooks/usePageMetadata';
 
 export default function NotFound() {
   usePageMetadata({
-    title: '404 - Page Not Found - GELO\'s Designs',
+    title: '404 - Page Not Found - Light 3D',
     description: 'The page you are looking for does not exist.',
   });
 

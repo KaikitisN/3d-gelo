@@ -7,7 +7,7 @@ import { createTimeline, stagger } from 'animejs';
 
 export default function Home() {
   usePageMetadata({
-    title: "GELO's Designs - Premium 3D Printed Goods",
+    title: "Light 3D - Premium 3D Printed Goods",
     description: 'Browse our collection of premium 3D printed products. Made to order with quality materials including PLA, PETG, and Resin.',
     ogImage: 'https://images.unsplash.com/photo-1581093458791-9d42e3b6c862?w=1200',
   });
@@ -67,9 +67,9 @@ export default function Home() {
                   Shop Now
                 </button>
               </Link>
-              <Link to="/category/custom-orders" style={{ opacity: 0 }}>
+              <Link to="/custom-lithophane" style={{ opacity: 0 }}>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                  Custom Orders
+                  Custom Lithophane
                 </button>
               </Link>
             </div>
@@ -96,7 +96,81 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {featuredProducts.slice(0, 6).map((product) => (
+          {/* Custom Lithophane Featured Card */}
+          <Link 
+            to="/custom-lithophane"
+            className="group bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary-200"
+          >
+            <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <svg className="w-20 h-20 mx-auto mb-4 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <div className="text-4xl font-bold text-primary-600 mb-2">Custom</div>
+                  <div className="text-2xl font-semibold text-primary-700">Lithophane</div>
+                </div>
+              </div>
+              <div className="absolute top-3 right-3">
+                <span className="bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  ✨ NEW
+                </span>
+              </div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                Custom Photo Lithophane
+              </h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Transform your favorite photos into stunning 3D printed art pieces with backlighting
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-primary-600 font-bold">From €15</span>
+                <span className="text-sm text-primary-600 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
+                  Customize Now →
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Lithophane Keyring Featured Card */}
+          <Link 
+            to="/custom-lithophane"
+            className="group bg-gradient-to-br from-amber-50 to-orange-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-amber-200"
+          >
+            <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-amber-100 to-orange-200">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <svg className="w-20 h-20 mx-auto mb-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  <div className="text-3xl font-bold text-amber-700 mb-2">Lithophane</div>
+                  <div className="text-2xl font-semibold text-amber-800">Keyring</div>
+                </div>
+              </div>
+              <div className="absolute top-3 right-3">
+                <span className="bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  🔑 MINI
+                </span>
+              </div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">
+                Lithophane Keyring
+              </h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Carry your memories everywhere! Compact lithophane keyring with your photo
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-amber-600 font-bold">Only €8</span>
+                <span className="text-sm text-amber-600 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
+                  Order Now →
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {featuredProducts.slice(0, 4).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

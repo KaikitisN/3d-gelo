@@ -1,4 +1,4 @@
-# Adding Your Own Product Photos to GELO's Designs
+# Adding Your Own Product Photos to Light 3D
 
 ## 📸 Why You Need Real Photos
 
