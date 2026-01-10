@@ -66,7 +66,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
         style={{ opacity: 0 }}
       >
-        <Link to={`/product/${product.id}`} className="block relative">
+        <Link to={product.customUrl || `/product/${product.id}`} className="block relative">
           <div className="aspect-square overflow-hidden bg-gray-100">
             <img
               src={product.images[0]}
