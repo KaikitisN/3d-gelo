@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { usePageMetadata } from '../hooks/usePageMetadata';
 import Button from '../components/Button';
 import { showToast } from '../components/Toast';
-import emailjs from '@emailjs/browser';
 
 export default function CustomLithophane() {
   usePageMetadata({
