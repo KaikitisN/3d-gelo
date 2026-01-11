@@ -15,23 +15,23 @@ export default function Category() {
 
   if (!category) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Category not found</h1>
-          <p className="text-gray-600">The category you're looking for doesn't exist.</p>
+          <h1 className="text-2xl font-bold text-white mb-2">Category not found</h1>
+          <p className="text-slate-400">The category you're looking for doesn't exist.</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-900">
       {/* Category Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold mb-4">{category.name}</h1>
-          <p className="text-xl text-primary-100">{category.description}</p>
-          <p className="mt-4 text-primary-200">
+          <h1 className="font-display text-5xl font-black mb-4">{category.name}</h1>
+          <p className="text-xl text-slate-300">{category.description}</p>
+          <p className="mt-4 text-slate-400">
             {products.length} product{products.length !== 1 ? 's' : ''}
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function Category() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-gray-600">No products in this category yet.</p>
+            <p className="text-slate-400">No products in this category yet.</p>
           </div>
         )}
       </div>

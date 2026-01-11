@@ -52,12 +52,12 @@ ${formData.message}
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-900">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-primary-100">
+          <h1 className="font-display text-5xl md:text-6xl font-black mb-4">Contact Us</h1>
+          <p className="text-xl text-slate-300">
             We're here to help with any questions or custom requests
           </p>
         </div>
@@ -67,12 +67,12 @@ ${formData.message}
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <svg
-                    className="h-6 w-6 text-primary-600"
+                    className="h-6 w-6 text-blue-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -86,10 +86,10 @@ ${formData.message}
                   </svg>
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-medium text-gray-900">Email</p>
+                  <p className="text-lg font-medium text-white">Email</p>
                   <a
                     href="mailto:gelo.designs3d@gmail.com"
-                    className="text-primary-600 hover:text-primary-700"
+                    className="text-blue-400 hover:text-blue-300"
                   >
                     gelo.designs3d@gmail.com
                   </a>
@@ -99,7 +99,7 @@ ${formData.message}
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <svg
-                    className="h-6 w-6 text-primary-600"
+                    className="h-6 w-6 text-blue-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -113,10 +113,10 @@ ${formData.message}
                   </svg>
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-medium text-gray-900">Phone</p>
+                  <p className="text-lg font-medium text-white">Phone</p>
                   <a
                     href="tel:96557587"
-                    className="text-primary-600 hover:text-primary-700"
+                    className="text-blue-400 hover:text-blue-300"
                   >
                     96557587
                   </a>
@@ -124,9 +124,9 @@ ${formData.message}
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-2">Custom Orders</h3>
-              <p className="text-sm text-gray-700">
+            <div className="mt-8 p-6 bg-blue-900/20 border border-blue-700/50 rounded-lg">
+              <h3 className="font-semibold text-white mb-2">Custom Orders</h3>
+              <p className="text-sm text-slate-300">
                 Have a unique project in mind? We offer custom design services. Send us your
                 ideas, and we'll work with you to bring them to life!
               </p>
@@ -134,11 +134,11 @@ ${formData.message}
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg border border-gray-200 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
+          <div className="bg-slate-800 border border-slate-700 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
                   Name *
                 </label>
                 <input
@@ -147,12 +147,12 @@ ${formData.message}
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
                   Email *
                 </label>
                 <input
@@ -161,12 +161,12 @@ ${formData.message}
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
                   Subject *
                 </label>
                 <select
@@ -174,7 +174,7 @@ ${formData.message}
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Select a subject</option>
                   <option value="general">General Inquiry</option>
@@ -186,7 +186,7 @@ ${formData.message}
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -195,7 +195,7 @@ ${formData.message}
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 

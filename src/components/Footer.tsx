@@ -5,12 +5,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Light 3D</h3>
+            <h3 className="font-display text-white text-lg font-bold mb-4">Light 3D</h3>
             <p className="text-sm mb-4">
               Premium 3D printed goods crafted with quality materials and attention to detail.
               All products made to order.
@@ -20,7 +20,7 @@ export default function Footer() {
                 href="https://www.instagram.com/light_3d_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors"
+                className="text-slate-400 hover:text-blue-400 transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@ export default function Footer() {
                 href="https://www.tiktok.com/@light_3d_?is_from_webapp=1&sender_device=pc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors"
+                className="text-slate-400 hover:text-blue-400 transition-colors"
                 aria-label="TikTok"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -43,13 +43,13 @@ export default function Footer() {
 
           {/* Shop */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Shop</h3>
+            <h3 className="font-display text-white text-lg font-bold mb-4">Shop</h3>
             <ul className="space-y-2 text-sm">
               {data.categories.slice(0, 4).map((category) => (
                 <li key={category.slug}>
                   <Link
                     to={`/category/${category.slug}`}
-                    className="hover:text-primary-400 transition-colors"
+                    className="hover:text-blue-400 transition-colors"
                   >
                     {category.name}
                   </Link>
@@ -60,27 +60,27 @@ export default function Footer() {
 
           {/* Customer Service */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Customer Service</h3>
+            <h3 className="font-display text-white text-lg font-bold mb-4">Customer Service</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/about" className="hover:text-primary-400 transition-colors">
+                <Link to="/about" className="hover:text-blue-400 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-primary-400 transition-colors">
+                <Link to="/contact" className="hover:text-blue-400 transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="hover:text-primary-400 transition-colors">
+                <Link to="/faq" className="hover:text-blue-400 transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
                 <Link
                   to="/policies/shipping-returns"
-                  className="hover:text-primary-400 transition-colors"
+                  className="hover:text-blue-400 transition-colors"
                 >
                   Shipping & Returns
                 </Link>
@@ -90,15 +90,15 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="font-display text-white text-lg font-bold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/policies/privacy" className="hover:text-primary-400 transition-colors">
+                <Link to="/policies/privacy" className="hover:text-blue-400 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/policies/terms" className="hover:text-primary-400 transition-colors">
+                <Link to="/policies/terms" className="hover:text-blue-400 transition-colors">
                   Terms of Service
                 </Link>
               </li>
@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-800 text-sm text-center">
+        <div className="mt-8 pt-8 border-t border-slate-800 text-sm text-center">
           <p>© {currentYear} Light 3D. All rights reserved.</p>
         </div>
       </div>

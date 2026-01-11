@@ -50,7 +50,7 @@ export default function Modal({ isOpen, onClose, title, children, size = 'md' }:
       {/* Backdrop */}
       <div 
         ref={backdropRef}
-        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" 
+        className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" 
         onClick={onClose} 
         aria-hidden="true"
         style={{ opacity: 0 }}
@@ -68,17 +68,17 @@ export default function Modal({ isOpen, onClose, title, children, size = 'md' }:
               (modalRef as any).current = node;
             }
           }}
-          className={`relative bg-white rounded-lg shadow-xl ${sizeClasses[size]} w-full`}
+          className={`relative bg-slate-800 rounded-lg shadow-xl ${sizeClasses[size]} w-full border border-slate-700`}
           style={{ opacity: 0 }}
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <h2 id="modal-title" className="text-xl font-semibold text-gray-900">
+          <div className="flex items-center justify-between p-6 border-b border-slate-700">
+            <h2 id="modal-title" className="text-xl font-semibold text-white">
               {title}
             </h2>
             <button
               onClick={onClose}
-              className="p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
+              className="p-1 text-slate-400 hover:text-blue-400 rounded-full hover:bg-slate-700 transition-colors"
               aria-label="Close modal"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

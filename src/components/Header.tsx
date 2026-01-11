@@ -26,13 +26,13 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      <header className="sticky top-0 z-50 bg-slate-900 border-b border-slate-800 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 flex items-center group">
-              <span className="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                Light <span className="text-primary-600">3D</span>
+              <span className="font-display text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                Light <span className="text-blue-400">3D</span>
               </span>
             </Link>
 
@@ -42,8 +42,8 @@ export default function Header() {
                 to="/"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/')
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-slate-800'
+                    : 'text-slate-300 hover:text-blue-400 hover:bg-slate-800'
                 }`}
               >
                 Home
@@ -52,8 +52,8 @@ export default function Header() {
                 to="/shop"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/shop')
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-slate-800'
+                    : 'text-slate-300 hover:text-blue-400 hover:bg-slate-800'
                 }`}
               >
                 Shop
@@ -75,7 +75,7 @@ export default function Header() {
                 }}
               >
                 <button
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 transition-colors flex items-center"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-blue-400 hover:bg-slate-800 transition-colors flex items-center"
                   aria-expanded={categoriesOpen}
                   aria-haspopup="true"
                 >
@@ -98,12 +98,12 @@ export default function Header() {
                 </button>
 
                 {categoriesOpen && (
-                  <div className="absolute left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                  <div className="absolute left-0 mt-1 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2">
                     {data.categories.map((category) => (
                       <Link
                         key={category.slug}
                         to={`/category/${category.slug}`}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700 hover:text-blue-400 transition-colors"
                         onClick={() => setCategoriesOpen(false)}
                       >
                         {category.name}
@@ -117,8 +117,8 @@ export default function Header() {
                 to="/about"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/about')
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-slate-800'
+                    : 'text-slate-300 hover:text-blue-400 hover:bg-slate-800'
                 }`}
               >
                 About
@@ -127,8 +127,8 @@ export default function Header() {
                 to="/contact"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/contact')
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-slate-800'
+                    : 'text-slate-300 hover:text-blue-400 hover:bg-slate-800'
                 }`}
               >
                 Contact
@@ -143,7 +143,7 @@ export default function Header() {
                   href="https://www.instagram.com/light_3d_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-gray-600 hover:text-pink-600 transition-colors rounded-full hover:bg-gray-100"
+                  className="p-2 text-slate-400 hover:text-pink-400 transition-colors rounded-full hover:bg-slate-800"
                   aria-label="Follow us on Instagram"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -154,7 +154,7 @@ export default function Header() {
                   href="https://www.tiktok.com/@light_3d_?is_from_webapp=1&sender_device=pc"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-gray-600 hover:text-gray-900 transition-colors rounded-full hover:bg-gray-100"
+                  className="p-2 text-slate-400 hover:text-slate-200 transition-colors rounded-full hover:bg-slate-800"
                   aria-label="Follow us on TikTok"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -171,7 +171,7 @@ export default function Header() {
               {/* Cart Icon */}
               <Link
                 to="/cart"
-                className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors rounded-full hover:bg-gray-100"
+                className="relative p-2 text-slate-300 hover:text-blue-400 transition-colors rounded-full hover:bg-slate-800"
                 aria-label={`Shopping cart with ${cartCount} items`}
               >
                 <svg
@@ -188,7 +188,7 @@ export default function Header() {
                   />
                 </svg>
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                     {cartCount > 9 ? '9+' : cartCount}
                   </span>
                 )}
@@ -196,7 +196,7 @@ export default function Header() {
 
               {/* Mobile Menu Button */}
               <button
-                className="md:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors rounded-full hover:bg-gray-100"
+                className="md:hidden p-2 text-slate-300 hover:text-blue-400 transition-colors rounded-full hover:bg-slate-800"
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Open menu"
               >

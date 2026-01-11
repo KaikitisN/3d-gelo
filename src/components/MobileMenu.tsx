@@ -20,7 +20,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+        className="fixed inset-0 bg-black bg-opacity-75 z-40 md:hidden"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -28,7 +28,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Menu Panel */}
       <div
         ref={containerRef}
-        className="fixed inset-y-0 right-0 max-w-sm w-full bg-white shadow-xl z-50 md:hidden overflow-y-auto"
+        className="fixed inset-y-0 right-0 max-w-sm w-full bg-slate-900 shadow-xl z-50 md:hidden overflow-y-auto border-l border-slate-800"
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation menu"
@@ -36,10 +36,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="p-4">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
-            <span className="text-xl font-bold text-gray-900">Menu</span>
+            <span className="font-display text-xl font-bold text-white">Menu</span>
             <button
               onClick={onClose}
-              className="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
+              className="p-2 text-slate-400 hover:text-blue-400 rounded-full hover:bg-slate-800 transition-colors"
               aria-label="Close menu"
             >
               <svg
@@ -63,21 +63,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <Link
               to="/"
               onClick={onClose}
-              className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+              className="block px-4 py-3 text-base font-medium text-white hover:bg-slate-800 hover:text-blue-400 rounded-lg transition-colors"
             >
               Home
             </Link>
             <Link
               to="/shop"
               onClick={onClose}
-              className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+              className="block px-4 py-3 text-base font-medium text-white hover:bg-slate-800 hover:text-blue-400 rounded-lg transition-colors"
             >
               Shop
             </Link>
 
             {/* Categories */}
             <div className="pt-2">
-              <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
                 Categories
               </div>
               {data.categories.map((category) => (
@@ -85,7 +85,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   key={category.slug}
                   to={`/category/${category.slug}`}
                   onClick={onClose}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+                  className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-blue-400 rounded-lg transition-colors"
                 >
                   {category.name}
                 </Link>
@@ -95,21 +95,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <Link
               to="/about"
               onClick={onClose}
-              className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+              className="block px-4 py-3 text-base font-medium text-white hover:bg-slate-800 hover:text-blue-400 rounded-lg transition-colors"
             >
               About
             </Link>
             <Link
               to="/contact"
               onClick={onClose}
-              className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+              className="block px-4 py-3 text-base font-medium text-white hover:bg-slate-800 hover:text-blue-400 rounded-lg transition-colors"
             >
               Contact
             </Link>
             <Link
               to="/faq"
               onClick={onClose}
-              className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+              className="block px-4 py-3 text-base font-medium text-white hover:bg-slate-800 hover:text-blue-400 rounded-lg transition-colors"
             >
               FAQ
             </Link>

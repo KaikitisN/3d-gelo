@@ -102,14 +102,14 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-900">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="font-display text-5xl md:text-6xl font-black mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-primary-100">
+          <p className="text-xl text-slate-300">
             Find answers to common questions about our products and services
           </p>
         </div>
@@ -118,7 +118,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {faqs.map((category, catIndex) => (
           <div key={catIndex} className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{category.category}</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">{category.category}</h2>
             <div className="space-y-4">
               {category.questions.map((faq, qIndex) => {
                 const id = `${catIndex}-${qIndex}`;
@@ -127,16 +127,16 @@ export default function FAQ() {
                 return (
                   <div
                     key={id}
-                    className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                    className="bg-slate-800 rounded-lg border border-slate-700 overflow-hidden"
                   >
                     <button
                       onClick={() => toggleQuestion(id)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700 transition-colors"
                       aria-expanded={isOpen}
                     >
-                      <span className="font-semibold text-gray-900 pr-8">{faq.q}</span>
+                      <span className="font-semibold text-white pr-8">{faq.q}</span>
                       <svg
-                        className={`flex-shrink-0 w-5 h-5 text-gray-500 transition-transform ${
+                        className={`flex-shrink-0 w-5 h-5 text-slate-400 transition-transform ${
                           isOpen ? 'rotate-180' : ''
                         }`}
                         fill="none"
@@ -152,7 +152,7 @@ export default function FAQ() {
                       </svg>
                     </button>
                     {isOpen && (
-                      <div className="px-6 pb-4 text-gray-700">
+                      <div className="px-6 pb-4 text-slate-300">
                         <p>{faq.a}</p>
                       </div>
                     )}
@@ -163,16 +163,16 @@ export default function FAQ() {
           </div>
         ))}
 
-        <div className="mt-12 p-6 bg-primary-50 rounded-lg text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        <div className="mt-12 p-6 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border border-blue-700/50 rounded-lg text-center">
+          <h3 className="text-xl font-semibold text-white mb-2">
             Still have questions?
           </h3>
-          <p className="text-gray-700 mb-4">
+          <p className="text-slate-300 mb-4">
             We're here to help! Contact our support team for personalized assistance.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-500 hover:to-indigo-500 transition-all"
           >
             Contact Us
           </a>

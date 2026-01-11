@@ -94,14 +94,14 @@ export default function Shop() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <h1 className="font-display text-4xl md:text-5xl font-black text-white mb-2">
             All Products
           </h1>
-          <p className="text-gray-600">
+          <p className="text-slate-400">
             Showing {paginatedProducts.length} of {filteredProducts.length} products
           </p>
         </div>
@@ -109,12 +109,12 @@ export default function Shop() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Filters Sidebar */}
           <aside className="md:col-span-1">
-            <div className="bg-white rounded-lg border border-gray-200 p-6 sticky top-20">
+            <div className="bg-slate-800 rounded-lg border border-slate-700 p-6 sticky top-20">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="font-semibold text-gray-900">Filters</h2>
+                <h2 className="font-semibold text-white">Filters</h2>
                 <button
                   onClick={handleResetFilters}
-                  className="text-sm text-primary-600 hover:text-primary-700"
+                  className="text-sm text-blue-400 hover:text-blue-300"
                 >
                   Reset
                 </button>
@@ -122,13 +122,13 @@ export default function Shop() {
 
               {/* Sort */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-slate-300 mb-2">
                   Sort By
                 </label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="featured">Featured</option>
                   <option value="newest">Newest</option>
@@ -140,7 +140,7 @@ export default function Shop() {
 
               {/* Price Range */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-slate-300 mb-2">
                   Price Range
                 </label>
                 <div className="flex items-center gap-2">
@@ -153,10 +153,10 @@ export default function Shop() {
                         priceRange: [Number(e.target.value), filters.priceRange[1]],
                       })
                     }
-                    className="w-full border border-gray-300 rounded px-2 py-1 text-sm"
+                    className="w-full bg-slate-900 border border-slate-600 text-white rounded px-2 py-1 text-sm focus:ring-2 focus:ring-blue-500"
                     min="0"
                   />
-                  <span className="text-gray-500">to</span>
+                  <span className="text-slate-500">to</span>
                   <input
                     type="number"
                     value={filters.priceRange[1]}
@@ -166,7 +166,7 @@ export default function Shop() {
                         priceRange: [filters.priceRange[0], Number(e.target.value)],
                       })
                     }
-                    className="w-full border border-gray-300 rounded px-2 py-1 text-sm"
+                    className="w-full bg-slate-900 border border-slate-600 text-white rounded px-2 py-1 text-sm focus:ring-2 focus:ring-blue-500"
                     min="0"
                   />
                 </div>
@@ -174,7 +174,7 @@ export default function Shop() {
 
               {/* Material Filter */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-slate-300 mb-2">
                   Material
                 </label>
                 {['pla', 'petg', 'resin'].map((material) => (
@@ -195,9 +195,9 @@ export default function Shop() {
                           });
                         }
                       }}
-                      className="rounded text-primary-600 focus:ring-primary-500"
+                      className="rounded text-blue-600 focus:ring-blue-500 bg-slate-900 border-slate-600"
                     />
-                    <span className="ml-2 text-sm text-gray-700 capitalize">
+                    <span className="ml-2 text-sm text-slate-300 capitalize">
                       {material}
                     </span>
                   </label>
@@ -206,7 +206,7 @@ export default function Shop() {
 
               {/* Rating Filter */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-slate-300 mb-2">
                   Minimum Rating
                 </label>
                 <select
@@ -214,7 +214,7 @@ export default function Shop() {
                   onChange={(e) =>
                     setFilters({ ...filters, rating: Number(e.target.value) })
                   }
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="0">All Ratings</option>
                   <option value="4">4+ Stars</option>
@@ -246,7 +246,7 @@ export default function Shop() {
                     <button
                       onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                       disabled={currentPage === 1}
-                      className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-4 py-2 border border-slate-700 bg-slate-800 text-white rounded-lg hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Previous
                     </button>
@@ -257,8 +257,8 @@ export default function Shop() {
                           onClick={() => setCurrentPage(i + 1)}
                           className={`px-4 py-2 rounded-lg ${
                             currentPage === i + 1
-                              ? 'bg-primary-600 text-white'
-                              : 'border border-gray-300 hover:bg-gray-50'
+                              ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white'
+                              : 'border border-slate-700 bg-slate-800 text-white hover:bg-slate-700'
                           }`}
                         >
                           {i + 1}
@@ -268,7 +268,7 @@ export default function Shop() {
                     <button
                       onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                       disabled={currentPage === totalPages}
-                      className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-4 py-2 border border-slate-700 bg-slate-800 text-white rounded-lg hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Next
                     </button>
@@ -278,7 +278,7 @@ export default function Shop() {
             ) : (
               <div className="text-center py-16">
                 <svg
-                  className="mx-auto h-12 w-12 text-gray-400 mb-4"
+                  className="mx-auto h-12 w-12 text-slate-600 mb-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -290,15 +290,15 @@ export default function Shop() {
                     d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                <h3 className="text-lg font-medium text-white mb-2">
                   No products found
                 </h3>
-                <p className="text-gray-500 mb-4">
+                <p className="text-slate-400 mb-4">
                   Try adjusting your filters to see more results
                 </p>
                 <button
                   onClick={handleResetFilters}
-                  className="text-primary-600 hover:text-primary-700 font-medium"
+                  className="text-blue-400 hover:text-blue-300 font-medium"
                 >
                   Reset Filters
                 </button>

@@ -63,11 +63,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     <>
       <div 
         ref={cardRef}
-        className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
+        className="group bg-slate-800 rounded-lg border border-slate-700 overflow-hidden hover:shadow-xl hover:border-slate-600 transition-all"
         style={{ opacity: 0 }}
       >
         <Link to={product.customUrl || `/product/${product.id}`} className="block relative">
-          <div className="aspect-square overflow-hidden bg-gray-100">
+          <div className="aspect-square overflow-hidden bg-slate-900">
             <img
               src={product.images[0]}
               alt={product.name}
@@ -75,7 +75,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           </div>
           {product.featured && (
-            <span className="absolute top-2 right-2 bg-primary-600 text-white text-xs font-semibold px-2 py-1 rounded">
+            <span className="absolute top-2 right-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold px-2 py-1 rounded">
               Featured
             </span>
           )}
@@ -83,7 +83,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <div className="p-4">
           <Link to={product.customUrl || `/product/${product.id}`}>
-            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2">
+            <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors line-clamp-2">
               {product.name}
             </h3>
           </Link>
@@ -96,7 +96,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                   className={`h-4 w-4 ${
                     i < Math.floor(product.rating)
                       ? 'text-yellow-400'
-                      : 'text-gray-300'
+                      : 'text-slate-600'
                   }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -105,19 +105,19 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </svg>
               ))}
             </div>
-            <span className="ml-2 text-sm text-gray-600">({product.reviewCount})</span>
+            <span className="ml-2 text-sm text-slate-400">({product.reviewCount})</span>
           </div>
 
-          <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+          <p className="mt-2 text-sm text-slate-400 line-clamp-2">
             {product.description}
           </p>
 
           <div className="mt-3 flex items-center justify-between">
             <div>
-              <p className="text-xl font-bold text-gray-900">
+              <p className="text-xl font-bold text-white">
                 {formatPrice(product.price)}
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-slate-500">
                 Ships in {formatLeadTime(product.leadTimeDaysMin, product.leadTimeDaysMax)}
               </p>
             </div>
@@ -171,7 +171,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           </div>
           <div>
-            <p className="text-2xl font-bold text-gray-900 mb-2">
+            <p className="text-2xl font-bold text-white mb-2">
               {formatPrice(product.price)}
             </p>
             <div className="flex items-center mb-4">
@@ -182,7 +182,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                     className={`h-5 w-5 ${
                       i < Math.floor(product.rating)
                         ? 'text-yellow-400'
-                        : 'text-gray-300'
+                        : 'text-slate-600'
                     }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -191,13 +191,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                   </svg>
                 ))}
               </div>
-              <span className="ml-2 text-sm text-gray-600">
+              <span className="ml-2 text-sm text-slate-400">
                 {product.rating} ({product.reviewCount} reviews)
               </span>
             </div>
-            <p className="text-gray-700 mb-4">{product.description}</p>
-            <div className="bg-blue-50 p-3 rounded-lg mb-4">
-              <p className="text-sm text-blue-900">
+            <p className="text-slate-300 mb-4">{product.description}</p>
+            <div className="bg-blue-900/30 border border-blue-700/50 p-3 rounded-lg mb-4">
+              <p className="text-sm text-blue-200">
                 <strong>Made to order:</strong> Ships in{' '}
                 {formatLeadTime(product.leadTimeDaysMin, product.leadTimeDaysMax)}
               </p>

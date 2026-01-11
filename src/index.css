@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-slate-900 text-slate-100 antialiased;
   }
 
   /* Focus styles for accessibility */
   *:focus-visible {
-    @apply outline-2 outline-offset-2 outline-primary-600 ring-0;
+    @apply outline-2 outline-offset-2 outline-blue-500 ring-0;
   }
 
   /* Smooth scrolling */
@@ -40,5 +42,14 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  @keyframes grid-move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(50px);
+    }
   }
 }

@@ -175,34 +175,34 @@ export default function Checkout() {
   // Order confirmation view
   if (orderReference && savedOrderDetails) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen bg-slate-900 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="bg-slate-800 border border-slate-700 rounded-lg shadow-lg p-8 text-center">
+            <div className="w-16 h-16 bg-green-900/30 border border-green-700/50 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl font-bold text-white mb-4">
               Order Request Submitted!
             </h1>
-            <p className="text-lg text-gray-600 mb-2">
+            <p className="text-lg text-slate-300 mb-2">
               Your order reference number is:
             </p>
-            <p className="text-2xl font-mono font-bold text-primary-600 mb-8">
+            <p className="text-2xl font-mono font-bold text-blue-400 mb-8">
               {orderReference}
             </p>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8 text-left">
-              <h2 className="font-semibold text-gray-900 mb-4">Order Summary</h2>
-              <div className="space-y-2 text-sm text-gray-700">
+            <div className="bg-blue-900/30 border border-blue-700/50 rounded-lg p-6 mb-8 text-left">
+              <h2 className="font-semibold text-white mb-4">Order Summary</h2>
+              <div className="space-y-2 text-sm text-slate-300">
                 <p><strong>Customer:</strong> {customerInfo.firstName} {customerInfo.lastName}</p>
                 <p><strong>Email:</strong> {customerInfo.email}</p>
                 <p><strong>Phone:</strong> {customerInfo.phone}</p>
                 <p><strong>Shipping:</strong> {shippingAddress.address}, {shippingAddress.city} {shippingAddress.zipCode}, {shippingAddress.country}</p>
                 <p><strong>Items:</strong> {savedOrderDetails.items.length}</p>
-                <p className="text-lg font-bold text-gray-900 pt-2"><strong>Total:</strong> {formatPrice(savedOrderDetails.total)}</p>
+                <p className="text-lg font-bold text-white pt-2"><strong>Total:</strong> {formatPrice(savedOrderDetails.total)}</p>
               </div>
             </div>
 
@@ -233,7 +233,7 @@ export default function Checkout() {
               </Button>
             </div>
 
-            <p className="mt-6 text-sm text-gray-600">
+            <p className="mt-6 text-sm text-slate-400">
               We'll review your request and contact you within 1-2 business days to confirm details. Your order will be delivered via ACS with Cash on Delivery payment (€3 delivery charge).
             </p>
           </div>
@@ -244,23 +244,23 @@ export default function Checkout() {
 
   // Multi-step checkout form
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-slate-900 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
+        <h1 className="font-display text-4xl font-black text-white mb-8">Checkout</h1>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Form Section */}
           <div className="lg:col-span-2">
             {/* Progress Steps */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 mb-6">
               <div className="flex items-center justify-between">
                 {[1, 2, 3].map((s) => (
                   <div key={s} className="flex items-center">
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold ${
                         step >= s
-                          ? 'bg-primary-600 text-white'
-                          : 'bg-gray-200 text-gray-600'
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-slate-700 text-slate-400'
                       }`}
                     >
                       {s}
@@ -268,14 +268,14 @@ export default function Checkout() {
                     {s < 3 && (
                       <div
                         className={`w-12 md:w-24 h-1 mx-2 ${
-                          step > s ? 'bg-primary-600' : 'bg-gray-200'
+                          step > s ? 'bg-blue-600' : 'bg-slate-700'
                         }`}
                       />
                     )}
                   </div>
                 ))}
               </div>
-              <div className="flex justify-between mt-2 text-xs md:text-sm text-gray-600">
+              <div className="flex justify-between mt-2 text-xs md:text-sm text-slate-400">
                 <span>Customer</span>
                 <span>Shipping</span>
                 <span>Review</span>
@@ -283,14 +283,14 @@ export default function Checkout() {
             </div>
 
             {/* Form Content */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
+            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
               {/* Step 1: Customer Information */}
               {step === 1 && (
                 <div>
-                  <h2 className="text-xl font-semibold mb-6">Customer Information</h2>
+                  <h2 className="text-xl font-semibold text-white mb-6">Customer Information</h2>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-slate-300 mb-2">
                         First Name *
                       </label>
                       <input
@@ -299,16 +299,16 @@ export default function Checkout() {
                         onChange={(e) =>
                           setCustomerInfo({ ...customerInfo, firstName: e.target.value })
                         }
-                        className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          errors.firstName ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                          errors.firstName ? 'border-red-500' : 'border-slate-600'
                         }`}
                       />
                       {errors.firstName && (
-                        <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
+                        <p className="mt-1 text-sm text-red-400">{errors.firstName}</p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-slate-300 mb-2">
                         Last Name *
                       </label>
                       <input
@@ -317,16 +317,16 @@ export default function Checkout() {
                         onChange={(e) =>
                           setCustomerInfo({ ...customerInfo, lastName: e.target.value })
                         }
-                        className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          errors.lastName ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                          errors.lastName ? 'border-red-500' : 'border-slate-600'
                         }`}
                       />
                       {errors.lastName && (
-                        <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>
+                        <p className="mt-1 text-sm text-red-400">{errors.lastName}</p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-slate-300 mb-2">
                         Email *
                       </label>
                       <input
@@ -335,16 +335,16 @@ export default function Checkout() {
                         onChange={(e) =>
                           setCustomerInfo({ ...customerInfo, email: e.target.value })
                         }
-                        className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          errors.email ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                          errors.email ? 'border-red-500' : 'border-slate-600'
                         }`}
                       />
                       {errors.email && (
-                        <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                        <p className="mt-1 text-sm text-red-400">{errors.email}</p>
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-slate-300 mb-2">
                         Phone *
                       </label>
                       <input
@@ -353,12 +353,12 @@ export default function Checkout() {
                         onChange={(e) =>
                           setCustomerInfo({ ...customerInfo, phone: e.target.value })
                         }
-                        className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          errors.phone ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                          errors.phone ? 'border-red-500' : 'border-slate-600'
                         }`}
                       />
                       {errors.phone && (
-                        <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                        <p className="mt-1 text-sm text-red-400">{errors.phone}</p>
                       )}
                     </div>
                   </div>
@@ -368,10 +368,10 @@ export default function Checkout() {
               {/* Step 2: Shipping Address */}
               {step === 2 && (
                 <div>
-                  <h2 className="text-xl font-semibold mb-6">Shipping Address</h2>
+                  <h2 className="text-xl font-semibold text-white mb-6">Shipping Address</h2>
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-slate-300 mb-2">
                         Street Address *
                       </label>
                       <input
@@ -380,17 +380,17 @@ export default function Checkout() {
                         onChange={(e) =>
                           setShippingAddress({ ...shippingAddress, address: e.target.value })
                         }
-                        className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          errors.address ? 'border-red-500' : 'border-gray-300'
+                        className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                          errors.address ? 'border-red-500' : 'border-slate-600'
                         }`}
                       />
                       {errors.address && (
-                        <p className="mt-1 text-sm text-red-600">{errors.address}</p>
+                        <p className="mt-1 text-sm text-red-400">{errors.address}</p>
                       )}
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-slate-300 mb-2">
                           City *
                         </label>
                         <input
@@ -399,16 +399,16 @@ export default function Checkout() {
                           onChange={(e) =>
                             setShippingAddress({ ...shippingAddress, city: e.target.value })
                           }
-                          className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                            errors.city ? 'border-red-500' : 'border-gray-300'
+                          className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                            errors.city ? 'border-red-500' : 'border-slate-600'
                           }`}
                         />
                         {errors.city && (
-                          <p className="mt-1 text-sm text-red-600">{errors.city}</p>
+                          <p className="mt-1 text-sm text-red-400">{errors.city}</p>
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-slate-300 mb-2">
                           ZIP Code *
                         </label>
                         <input
@@ -417,26 +417,26 @@ export default function Checkout() {
                           onChange={(e) =>
                             setShippingAddress({ ...shippingAddress, zipCode: e.target.value })
                           }
-                          className={`w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                            errors.zipCode ? 'border-red-500' : 'border-gray-300'
+                          className={`w-full bg-slate-900 border rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                            errors.zipCode ? 'border-red-500' : 'border-slate-600'
                           }`}
                         />
                         {errors.zipCode && (
-                          <p className="mt-1 text-sm text-red-600">{errors.zipCode}</p>
+                          <p className="mt-1 text-sm text-red-400">{errors.zipCode}</p>
                         )}
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-slate-300 mb-2">
                         Country
                       </label>
                       <input
                         type="text"
                         value="Cyprus"
                         disabled
-                        className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-gray-50 text-gray-600 cursor-not-allowed"
+                        className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed"
                       />
-                      <p className="mt-1 text-sm text-gray-500">We currently only ship to Cyprus</p>
+                      <p className="mt-1 text-sm text-slate-500">We currently only ship to Cyprus</p>
                     </div>
                   </div>
                 </div>
@@ -445,29 +445,29 @@ export default function Checkout() {
               {/* Step 3: Review */}
               {step === 3 && (
                 <div>
-                  <h2 className="text-xl font-semibold mb-6">Review Your Order</h2>
+                  <h2 className="text-xl font-semibold text-white mb-6">Review Your Order</h2>
                   <div className="space-y-6">
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">Customer Information</h3>
-                      <div className="text-sm text-gray-600 space-y-1">
+                      <h3 className="font-semibold text-white mb-2">Customer Information</h3>
+                      <div className="text-sm text-slate-400 space-y-1">
                         <p>{customerInfo.firstName} {customerInfo.lastName}</p>
                         <p>{customerInfo.email}</p>
                         <p>{customerInfo.phone}</p>
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">Shipping Address</h3>
-                      <div className="text-sm text-gray-600 space-y-1">
+                      <h3 className="font-semibold text-white mb-2">Shipping Address</h3>
+                      <div className="text-sm text-slate-400 space-y-1">
                         <p>{shippingAddress.address}</p>
                         <p>{shippingAddress.city} {shippingAddress.zipCode}</p>
                         <p>{shippingAddress.country}</p>
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">Order Items ({items.length})</h3>
+                      <h3 className="font-semibold text-white mb-2">Order Items ({items.length})</h3>
                       <div className="space-y-2">
                         {items.map((item) => (
-                          <div key={item.itemId} className="text-sm text-gray-600 flex justify-between">
+                          <div key={item.itemId} className="text-sm text-slate-400 flex justify-between">
                             <span>{item.product.name} x{item.quantity}</span>
                             <span>{formatPrice(
                               (item.product.price +
@@ -520,25 +520,25 @@ export default function Checkout() {
 
           {/* Order Summary Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg border border-gray-200 p-6 sticky top-20">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Order Summary</h2>
+            <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 sticky top-20">
+              <h2 className="text-xl font-bold text-white mb-4">Order Summary</h2>
               <div className="space-y-3 mb-6">
-                <div className="flex justify-between text-sm text-gray-600">
+                <div className="flex justify-between text-sm text-slate-400">
                   <span>Subtotal ({items.length} items)</span>
                   <span>{formatPrice(subtotal)}</span>
                 </div>
-                <div className="flex justify-between text-sm text-gray-600">
+                <div className="flex justify-between text-sm text-slate-400">
                   <span>ACS Delivery</span>
                   <span>{formatPrice(shippingCost)}</span>
                 </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <div className="flex justify-between text-lg font-bold text-gray-900">
+                <div className="pt-3 border-t border-slate-700">
+                  <div className="flex justify-between text-lg font-bold text-white">
                     <span>Total</span>
                     <span>{formatPrice(total)}</span>
                   </div>
                 </div>
               </div>
-              <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-900">
+              <div className="p-4 bg-amber-900/30 border border-amber-700/50 rounded-lg text-sm text-amber-200">
                 <strong>💰 Cash on Delivery</strong>
                 <p className="mt-2">Payment will be collected by ACS courier upon delivery (cash only). Delivery charge: €3</p>
               </div>

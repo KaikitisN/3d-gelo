@@ -265,21 +265,21 @@ export default function Policy() {
       }
       if (line.startsWith('### ')) {
         return (
-          <h3 key={index} className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+          <h3 key={index} className="text-xl font-semibold text-white mt-6 mb-3">
             {line.substring(4)}
           </h3>
         );
       }
       if (line.startsWith('**') && line.endsWith('**')) {
         return (
-          <p key={index} className="font-semibold text-gray-900 mt-4 mb-2">
+          <p key={index} className="font-semibold text-white mt-4 mb-2">
             {line.substring(2, line.length - 2)}
           </p>
         );
       }
       if (line.startsWith('- ')) {
         return (
-          <li key={index} className="text-gray-700 ml-6 mb-1">
+          <li key={index} className="text-slate-300 ml-6 mb-1">
             {line.substring(2)}
           </li>
         );
@@ -288,7 +288,7 @@ export default function Policy() {
         return <div key={index} className="h-4" />;
       }
       return (
-        <p key={index} className="text-gray-700 mb-3">
+        <p key={index} className="text-slate-300 mb-3">
           {line}
         </p>
       );
@@ -296,11 +296,11 @@ export default function Policy() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-900">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold">{policy.title}</h1>
+          <h1 className="font-display text-5xl md:text-6xl font-black">{policy.title}</h1>
         </div>
       </div>
 
@@ -310,10 +310,10 @@ export default function Policy() {
           {renderContent(policy.content)}
         </div>
 
-        <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-600">
+        <div className="mt-12 p-6 bg-slate-800 border border-slate-700 rounded-lg">
+          <p className="text-sm text-slate-300">
             <strong>Questions?</strong> If you have any questions about this policy,
-            please <a href="/contact" className="text-primary-600 hover:text-primary-700">contact us</a>.
+            please <a href="/contact" className="text-blue-400 hover:text-blue-300">contact us</a>.
           </p>
         </div>
       </div>

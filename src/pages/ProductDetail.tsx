@@ -54,10 +54,10 @@ export default function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Product not found</h1>
-          <Link to="/shop" className="text-primary-600 hover:text-primary-700">
+          <h1 className="text-2xl font-bold text-white mb-2">Product not found</h1>
+          <Link to="/shop" className="text-blue-400 hover:text-blue-300">
             Back to shop
           </Link>
         </div>
@@ -84,20 +84,21 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumb */}
-      <nav className="flex mb-8 text-sm">
-        <Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link>
-        <span className="mx-2 text-gray-400">/</span>
-        <Link to="/shop" className="text-gray-500 hover:text-gray-700">Shop</Link>
-        <span className="mx-2 text-gray-400">/</span>
-        <span className="text-gray-900">{product.name}</span>
-      </nav>
+    <div className="min-h-screen bg-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Breadcrumb */}
+        <nav className="flex mb-8 text-sm">
+          <Link to="/" className="text-slate-400 hover:text-slate-300">Home</Link>
+          <span className="mx-2 text-slate-600">/</span>
+          <Link to="/shop" className="text-slate-400 hover:text-slate-300">Shop</Link>
+          <span className="mx-2 text-slate-600">/</span>
+          <span className="text-white">{product.name}</span>
+        </nav>
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Image Gallery */}
         <div>
-          <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4">
+          <div className="aspect-square bg-slate-800 rounded-lg overflow-hidden mb-4 border border-slate-700">
             <img
               src={product.images[selectedImage]}
               alt={product.name}
@@ -109,8 +110,8 @@ export default function ProductDetail() {
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
-                className={`aspect-square bg-gray-100 rounded-lg overflow-hidden ${
-                  selectedImage === index ? 'ring-2 ring-primary-600' : ''
+                className={`aspect-square bg-slate-800 rounded-lg overflow-hidden border-2 ${
+                  selectedImage === index ? 'border-blue-500' : 'border-slate-700'
                 }`}
               >
                 <img
@@ -125,7 +126,7 @@ export default function ProductDetail() {
 
         {/* Product Info */}
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">{product.name}</h1>
           
           <div className="flex items-center mb-4">
             <div className="flex items-center">
@@ -133,7 +134,7 @@ export default function ProductDetail() {
                 <svg
                   key={i}
                   className={`h-5 w-5 ${
-                    i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'
+                    i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-slate-600'
                   }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -142,22 +143,22 @@ export default function ProductDetail() {
                 </svg>
               ))}
             </div>
-            <span className="ml-2 text-gray-600">
+            <span className="ml-2 text-slate-400">
               {product.rating} ({product.reviewCount} reviews)
             </span>
           </div>
 
           <div className="mb-6">
-            <p className="text-4xl font-bold text-gray-900">
+            <p className="text-4xl font-bold text-white">
               {formatPrice(calculateTotalPrice())}
             </p>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-slate-400 mt-1">
               Base price: {formatPrice(product.price)}
             </p>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <p className="text-sm text-blue-900">
+          <div className="bg-blue-900/30 border border-blue-700/50 rounded-lg p-4 mb-6">
+            <p className="text-sm text-blue-200">
               <strong>Made to order:</strong> Ships in{' '}
               {formatLeadTime(product.leadTimeDaysMin, product.leadTimeDaysMax)}
             </p>
@@ -165,7 +166,7 @@ export default function ProductDetail() {
 
           {/* Material Selection */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-900 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Material
             </label>
             <div className="grid grid-cols-2 gap-3">
@@ -175,14 +176,14 @@ export default function ProductDetail() {
                   onClick={() => setSelectedMaterial(material)}
                   className={`p-3 border-2 rounded-lg text-left transition-colors ${
                     selectedMaterial?.id === material.id
-                      ? 'border-primary-600 bg-primary-50'
-                      : 'border-gray-200 hover:border-gray-300'
+                      ? 'border-blue-500 bg-blue-900/30'
+                      : 'border-slate-700 hover:border-slate-600 bg-slate-800'
                   }`}
                 >
-                  <div className="font-medium">{material.name}</div>
-                  <div className="text-sm text-gray-600">{material.description}</div>
+                  <div className="font-medium text-white">{material.name}</div>
+                  <div className="text-sm text-slate-400">{material.description}</div>
                   {material.priceModifier > 0 && (
-                    <div className="text-sm text-primary-600 mt-1">
+                    <div className="text-sm text-blue-400 mt-1">
                       +{formatPrice(material.priceModifier)}
                     </div>
                   )}
@@ -193,7 +194,7 @@ export default function ProductDetail() {
 
           {/* Color Selection */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-900 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Color
             </label>
             <div className="flex flex-wrap gap-3">
@@ -203,8 +204,8 @@ export default function ProductDetail() {
                   onClick={() => setSelectedColor(color)}
                   className={`relative p-2 border-2 rounded-lg ${
                     selectedColor?.id === color.id
-                      ? 'border-primary-600'
-                      : 'border-gray-200'
+                      ? 'border-blue-500'
+                      : 'border-slate-700'
                   }`}
                   title={color.name}
                 >
@@ -213,7 +214,7 @@ export default function ProductDetail() {
                     style={{ backgroundColor: color.hexCode }}
                   />
                   {selectedColor?.id === color.id && (
-                    <div className="absolute -top-1 -right-1 bg-primary-600 rounded-full p-1">
+                    <div className="absolute -top-1 -right-1 bg-blue-500 rounded-full p-1">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -223,7 +224,7 @@ export default function ProductDetail() {
               ))}
             </div>
             {selectedColor && (
-              <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-2 text-sm text-slate-400">
                 {selectedColor.name}
                 {selectedColor.priceModifier > 0 && ` (+${formatPrice(selectedColor.priceModifier)})`}
               </p>
@@ -232,7 +233,7 @@ export default function ProductDetail() {
 
           {/* Size Selection */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-900 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Size
             </label>
             <div className="grid grid-cols-2 gap-3">
@@ -242,14 +243,14 @@ export default function ProductDetail() {
                   onClick={() => setSelectedSize(size)}
                   className={`p-3 border-2 rounded-lg text-left transition-colors ${
                     selectedSize?.id === size.id
-                      ? 'border-primary-600 bg-primary-50'
-                      : 'border-gray-200 hover:border-gray-300'
+                      ? 'border-blue-500 bg-blue-900/30'
+                      : 'border-slate-700 hover:border-slate-600 bg-slate-800'
                   }`}
                 >
-                  <div className="font-medium">{size.name}</div>
-                  <div className="text-sm text-gray-600">{size.dimensions}</div>
+                  <div className="font-medium text-white">{size.name}</div>
+                  <div className="text-sm text-slate-400">{size.dimensions}</div>
                   {size.priceModifier > 0 && (
-                    <div className="text-sm text-primary-600 mt-1">
+                    <div className="text-sm text-blue-400 mt-1">
                       +{formatPrice(size.priceModifier)}
                     </div>
                   )}
@@ -260,27 +261,27 @@ export default function ProductDetail() {
 
           {/* Customization */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-900 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Customization Note (Optional)
             </label>
             <textarea
               value={customization}
               onChange={(e) => setCustomization(e.target.value)}
               placeholder="Add any special requests or customizations..."
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full bg-slate-900 border border-slate-600 text-white placeholder-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows={3}
             />
           </div>
 
           {/* Quantity */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-900 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Quantity
             </label>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="px-4 py-2 border border-slate-600 bg-slate-800 text-white rounded-lg hover:bg-slate-700"
               >
                 -
               </button>
@@ -288,12 +289,12 @@ export default function ProductDetail() {
                 type="number"
                 value={quantity}
                 onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                className="w-20 text-center border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-20 text-center bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 min="1"
               />
               <button
                 onClick={() => setQuantity(quantity + 1)}
-                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="px-4 py-2 border border-slate-600 bg-slate-800 text-white rounded-lg hover:bg-slate-700"
               >
                 +
               </button>
@@ -309,7 +310,7 @@ export default function ProductDetail() {
 
       {/* Tabs Section */}
       <div className="mt-16">
-        <div className="border-b border-gray-200">
+        <div className="border-b border-slate-700">
           <div className="flex space-x-8">
             {['description', 'specs', 'shipping'].map((tab) => (
               <button
@@ -317,8 +318,8 @@ export default function ProductDetail() {
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`pb-4 text-sm font-medium capitalize ${
                   activeTab === tab
-                    ? 'border-b-2 border-primary-600 text-primary-600'
-                    : 'text-gray-500 hover:text-gray-700'
+                    ? 'border-b-2 border-blue-500 text-blue-400'
+                    : 'text-slate-400 hover:text-slate-300'
                 }`}
               >
                 {tab}
@@ -330,39 +331,39 @@ export default function ProductDetail() {
         <div className="py-8">
           {activeTab === 'description' && (
             <div>
-              <h3 className="text-xl font-semibold mb-4">Product Description</h3>
-              <p className="text-gray-700 whitespace-pre-line">{product.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-4">Product Description</h3>
+              <p className="text-slate-300 whitespace-pre-line">{product.description}</p>
             </div>
           )}
           {activeTab === 'specs' && (
             <div>
-              <h3 className="text-xl font-semibold mb-4">Specifications</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Specifications</h3>
               <dl className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <dt className="font-medium text-gray-900">SKU</dt>
-                  <dd className="text-gray-600">{product.sku}</dd>
+                  <dt className="font-medium text-white">SKU</dt>
+                  <dd className="text-slate-400">{product.sku}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Category</dt>
-                  <dd className="text-gray-600">{product.categorySlug}</dd>
+                  <dt className="font-medium text-white">Category</dt>
+                  <dd className="text-slate-400">{product.categorySlug}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Available Materials</dt>
-                  <dd className="text-gray-600">
+                  <dt className="font-medium text-white">Available Materials</dt>
+                  <dd className="text-slate-400">
                     {product.materialOptions.map((m) => m.name).join(', ')}
                   </dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Color Options</dt>
-                  <dd className="text-gray-600">{product.colorOptions.length} colors</dd>
+                  <dt className="font-medium text-white">Color Options</dt>
+                  <dd className="text-slate-400">{product.colorOptions.length} colors</dd>
                 </div>
               </dl>
             </div>
           )}
           {activeTab === 'shipping' && (
             <div>
-              <h3 className="text-xl font-semibold mb-4">Shipping & Returns</h3>
-              <div className="space-y-4 text-gray-700">
+              <h3 className="text-xl font-semibold text-white mb-4">Shipping & Returns</h3>
+              <div className="space-y-4 text-slate-300">
                 <p>
                   <strong>Production Time:</strong> {formatLeadTime(product.leadTimeDaysMin, product.leadTimeDaysMax)}
                 </p>
@@ -376,6 +377,7 @@ export default function ProductDetail() {
             </div>
           )}
         </div>
+      </div>
       </div>
     </div>
   );

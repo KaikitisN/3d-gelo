@@ -100,12 +100,12 @@ Note: Delivery charge (€3) will be added to final price.
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-900">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Custom Lithophane</h1>
-          <p className="text-xl text-primary-100">
+          <h1 className="font-display text-5xl md:text-6xl font-black mb-4">Custom Lithophane</h1>
+          <p className="text-xl text-slate-300">
             Transform your favorite photos into stunning 3D printed lithophanes
           </p>
         </div>
@@ -115,8 +115,8 @@ Note: Delivery charge (€3) will be added to final price.
         <div className="grid md:grid-cols-2 gap-12">
           {/* Info Section */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">What is a Lithophane?</h2>
-            <p className="text-gray-700 mb-4">
+            <h2 className="text-2xl font-bold text-white mb-6">What is a Lithophane?</h2>
+            <p className="text-slate-300 mb-4">
               A lithophane is a unique 3D printed art piece that reveals a hidden image when
               backlit. The varying thickness of the material creates beautiful gradients and
               details, turning your favorite photos into stunning decorative pieces.
@@ -124,62 +124,62 @@ Note: Delivery charge (€3) will be added to final price.
 
             {/* Image Gallery */}
             <div className="mb-8">
-              <h3 className="font-semibold text-gray-900 mb-4">📷 Gallery</h3>
+              <h3 className="font-semibold text-white mb-4">📷 Gallery</h3>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <img
                   src="/images/products/lithophane-example-1.webp"
                   alt="Lithophane Example 1"
-                  className="w-full rounded-lg shadow-lg aspect-square object-cover"
+                  className="w-full rounded-lg shadow-lg aspect-square object-cover border border-slate-700"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%23e5e7eb" width="400" height="400"/%3E%3Ctext fill="%236b7280" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3ELithophane Example%3C/text%3E%3C/svg%3E';
+                    target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%231e293b" width="400" height="400"/%3E%3Ctext fill="%2394a3b8" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3ELithophane Example%3C/text%3E%3C/svg%3E';
                   }}
                 />
                 <img
                   src="/images/products/lithophane-example-2.webp"
                   alt="Lithophane Example 2"
-                  className="w-full rounded-lg shadow-lg aspect-square object-cover"
+                  className="w-full rounded-lg shadow-lg aspect-square object-cover border border-slate-700"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%23e5e7eb" width="400" height="400"/%3E%3Ctext fill="%236b7280" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EBacklit Effect%3C/text%3E%3C/svg%3E';
+                    target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect fill="%231e293b" width="400" height="400"/%3E%3Ctext fill="%2394a3b8" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EBacklit Effect%3C/text%3E%3C/svg%3E';
                   }}
                 />
               </div>
               <img
                 src="/images/products/lithophane-example-3.webp"
                 alt="Lithophane Display Example"
-                className="w-full rounded-lg shadow-lg aspect-video object-cover"
+                className="w-full rounded-lg shadow-lg aspect-video object-cover border border-slate-700"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="600" height="400"%3E%3Crect fill="%23e5e7eb" width="600" height="400"/%3E%3Ctext fill="%236b7280" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3ELithophane with Stand%3C/text%3E%3C/svg%3E';
+                  target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="600" height="400"%3E%3Crect fill="%231e293b" width="600" height="400"/%3E%3Ctext fill="%2394a3b8" font-family="Arial" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3ELithophane with Stand%3C/text%3E%3C/svg%3E';
                 }}
               />
-              <p className="text-sm text-gray-500 mt-2 text-center italic">
+              <p className="text-sm text-slate-500 mt-2 text-center italic">
                 Examples: Lithophanes displayed with and without backlighting
               </p>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-3">Pricing</h3>
-              <div className="space-y-2 text-sm text-gray-700">
+            <div className="bg-blue-900/30 border border-blue-700/50 rounded-lg p-6 mb-6">
+              <h3 className="font-semibold text-white mb-3">Pricing</h3>
+              <div className="space-y-2 text-sm text-slate-300">
                 <div className="flex justify-between">
                   <span>• Keyring (4cm × 5cm):</span>
-                  <span className="font-semibold">€4</span>
+                  <span className="font-semibold text-blue-400">€4</span>
                 </div>
                 <div className="flex justify-between">
                   <span>• Lithophane (15cm × 15cm):</span>
-                  <span className="font-semibold">€13</span>
+                  <span className="font-semibold text-blue-400">€13</span>
                 </div>
                 <div className="flex justify-between">
                   <span>• Add Song Option (Lithophane only):</span>
-                  <span className="font-semibold">+€2</span>
+                  <span className="font-semibold text-blue-400">+€2</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-3">📸 Photo Guidelines</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+            <div className="bg-yellow-900/30 border border-yellow-700/50 rounded-lg p-6 mb-6">
+              <h3 className="font-semibold text-white mb-3">📸 Photo Guidelines</h3>
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li>• High resolution images work best (minimum 1000px)</li>
                 <li>• Good contrast and clear subjects produce better results</li>
                 <li>• Portrait photos, landscapes, and pets work wonderfully</li>
@@ -187,9 +187,9 @@ Note: Delivery charge (€3) will be added to final price.
               </ul>
             </div>
 
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-3">✨ Perfect For</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+            <div className="bg-green-900/30 border border-green-700/50 rounded-lg p-6">
+              <h3 className="font-semibold text-white mb-3">✨ Perfect For</h3>
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li>• Unique personalized gifts</li>
                 <li>• Wedding and anniversary presents</li>
                 <li>• Memorial pieces</li>
@@ -200,11 +200,11 @@ Note: Delivery charge (€3) will be added to final price.
           </div>
 
           {/* Order Form */}
-          <div className="bg-white rounded-lg border border-gray-200 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Your Lithophane</h2>
+          <div className="bg-slate-800 rounded-lg border border-slate-700 p-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Order Your Lithophane</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
                   Name *
                 </label>
                 <input
@@ -213,12 +213,12 @@ Note: Delivery charge (€3) will be added to final price.
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
                   Email *
                 </label>
                 <input
@@ -227,12 +227,12 @@ Note: Delivery charge (€3) will be added to final price.
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
                   Phone *
                 </label>
                 <input
@@ -241,12 +241,12 @@ Note: Delivery charge (€3) will be added to final price.
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="size" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="size" className="block text-sm font-medium text-slate-300 mb-2">
                   Type *
                 </label>
                 <select
@@ -254,7 +254,7 @@ Note: Delivery charge (€3) will be added to final price.
                   required
                   value={formData.size}
                   onChange={(e) => setFormData({ ...formData, size: e.target.value, addSong: e.target.value === 'keyring' ? false : formData.addSong })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="lithophane">Lithophane (15cm × 15cm) - €13</option>
                   <option value="keyring">Keyring (4cm × 5cm) - €4</option>
@@ -268,20 +268,20 @@ Note: Delivery charge (€3) will be added to final price.
                       type="checkbox"
                       checked={formData.addSong}
                       onChange={(e) => setFormData({ ...formData, addSong: e.target.checked })}
-                      className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-2 focus:ring-primary-500"
+                      className="w-4 h-4 text-blue-600 border-slate-600 rounded focus:ring-2 focus:ring-blue-500 bg-slate-900"
                     />
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-slate-300">
                       Add Spotify Song Code (+€2)
                     </span>
                   </label>
-                  <p className="text-xs text-gray-500 mt-1 ml-7">
+                  <p className="text-xs text-slate-500 mt-1 ml-7">
                     Include a scannable Spotify code for your favorite song on the lithophane
                   </p>
                 </div>
               )}
 
               <div>
-                <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="quantity" className="block text-sm font-medium text-slate-300 mb-2">
                   Quantity *
                 </label>
                 <select
@@ -289,7 +289,7 @@ Note: Delivery charge (€3) will be added to final price.
                   required
                   value={formData.quantity}
                   onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   {[1, 2, 3, 4, 5].map((num) => (
                     <option key={num} value={num}>
@@ -300,7 +300,7 @@ Note: Delivery charge (€3) will be added to final price.
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
                   Special Instructions (Optional)
                 </label>
                 <textarea
@@ -309,12 +309,12 @@ Note: Delivery charge (€3) will be added to final price.
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Any special requests or notes about your lithophane..."
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full bg-slate-900 border border-slate-600 text-white placeholder-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm text-gray-700">
+              <div className="bg-slate-700/50 rounded-lg p-4">
+                <p className="text-sm text-slate-300">
                   <strong>Estimated Price:</strong>{' '}
                   €
                   {(
@@ -323,7 +323,7 @@ Note: Delivery charge (€3) will be added to final price.
                     (formData.addSong && formData.size === 'lithophane' ? 2 : 0)
                   ).toFixed(2)}
                 </p>
-                <p className="text-xs text-gray-500 mt-2">
+                <p className="text-xs text-slate-500 mt-2">
                   * Delivery charge (€3) will be added at checkout
                 </p>
               </div>
@@ -332,7 +332,7 @@ Note: Delivery charge (€3) will be added to final price.
                 Request Quote
               </Button>
 
-              <p className="text-xs text-gray-500 text-center">
+              <p className="text-xs text-slate-500 text-center">
                 📧 Your email client will open with pre-filled order details. Don't forget to attach your image file before sending!
               </p>
             </form>

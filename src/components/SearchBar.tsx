@@ -61,14 +61,14 @@ export default function SearchBar() {
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => query.length >= 2 && setShowSuggestions(true)}
           placeholder="Search products..."
-          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-600 text-white placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           aria-label="Search products"
           aria-autocomplete="list"
           aria-controls="search-suggestions"
           aria-expanded={showSuggestions && suggestions.length > 0}
         />
         <svg
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -86,14 +86,14 @@ export default function SearchBar() {
       {showSuggestions && suggestions.length > 0 && (
         <div
           id="search-suggestions"
-          className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-80 overflow-y-auto z-50"
+          className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-lg shadow-xl max-h-80 overflow-y-auto z-50"
           role="listbox"
         >
           {suggestions.map((product) => (
             <button
               key={product.id}
               onClick={() => handleSelectProduct(product.id)}
-              className="w-full flex items-center p-3 hover:bg-gray-50 transition-colors text-left"
+              className="w-full flex items-center p-3 hover:bg-slate-700 transition-colors text-left"
               role="option"
             >
               <img
@@ -102,8 +102,8 @@ export default function SearchBar() {
                 className="w-12 h-12 object-cover rounded"
               />
               <div className="ml-3 flex-1">
-                <p className="text-sm font-medium text-gray-900">{product.name}</p>
-                <p className="text-xs text-gray-500">${product.price}</p>
+                <p className="text-sm font-medium text-white">{product.name}</p>
+                <p className="text-xs text-slate-400">${product.price}</p>
               </div>
             </button>
           ))}
@@ -112,8 +112,8 @@ export default function SearchBar() {
 
       {/* No Results */}
       {showSuggestions && query.length >= 2 && suggestions.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50">
-          <p className="text-sm text-gray-500">No products found</p>
+        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 z-50">
+          <p className="text-sm text-slate-400">No products found</p>
         </div>
       )}
     </div>
