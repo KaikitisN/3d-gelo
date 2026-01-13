@@ -341,34 +341,34 @@ Note: Delivery charge (€3) will be added to final price.
       </div>
 
       {/* Additional Info Section */}
-      <div className="bg-white border-t border-gray-200 py-16">
+      <div className="bg-slate-800 border-t border-slate-700 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">1</span>
+              <div className="bg-blue-900/50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border border-blue-700/50">
+                <span className="text-2xl font-bold text-blue-400">1</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Submit Your Order</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="font-semibold text-white mb-2">Submit Your Order</h3>
+              <p className="text-sm text-slate-300">
                 Fill out the form with your details and upload your favorite photo
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">2</span>
+              <div className="bg-blue-900/50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border border-blue-700/50">
+                <span className="text-2xl font-bold text-blue-400">2</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">We Create</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="font-semibold text-white mb-2">We Create</h3>
+              <p className="text-sm text-slate-300">
                 Our team converts your image into a lithophane and 3D prints it with care
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">3</span>
+              <div className="bg-blue-900/50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border border-blue-700/50">
+                <span className="text-2xl font-bold text-blue-400">3</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Delivered to You</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="font-semibold text-white mb-2">Delivered to You</h3>
+              <p className="text-sm text-slate-300">
                 Your custom lithophane arrives ready to display (5-10 business days)
               </p>
             </div>
