@@ -13,7 +13,7 @@ export default function CustomLithophane() {
     name: '',
     email: '',
     phone: '',
-    size: 'lithophane',
+    size: 'keyring',
     quantity: '1',
     addSong: false,
     message: '',
@@ -127,7 +127,7 @@ Note: Delivery charge (€3) will be added to final price.
               <h3 className="font-semibold text-white mb-4">📷 Gallery</h3>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <img
-                  src="/images/products/lithophane-example-1.webp"
+                  src="/images/products/IMG_4934.JPG"
                   alt="Lithophane Example 1"
                   className="w-full rounded-lg shadow-lg aspect-square object-cover border border-slate-700"
                   onError={(e) => {
@@ -136,7 +136,7 @@ Note: Delivery charge (€3) will be added to final price.
                   }}
                 />
                 <img
-                  src="/images/products/lithophane-example-2.webp"
+                  src="/images/products/IMG_5869.jpeg"
                   alt="Lithophane Example 2"
                   className="w-full rounded-lg shadow-lg aspect-square object-cover border border-slate-700"
                   onError={(e) => {
@@ -145,8 +145,9 @@ Note: Delivery charge (€3) will be added to final price.
                   }}
                 />
               </div>
+              {/* Temporarily commented out 3rd image
               <img
-                src="/images/products/lithophane-example-3.webp"
+                src="/images/products/IMG_4957.PNG"
                 alt="Lithophane Display Example"
                 className="w-full rounded-lg shadow-lg aspect-video object-cover border border-slate-700"
                 onError={(e) => {
@@ -157,13 +158,14 @@ Note: Delivery charge (€3) will be added to final price.
               <p className="text-sm text-slate-500 mt-2 text-center italic">
                 Examples: Lithophanes displayed with and without backlighting
               </p>
+              */}
             </div>
 
             <div className="bg-blue-900/30 border border-blue-700/50 rounded-lg p-6 mb-6">
               <h3 className="font-semibold text-white mb-3">Pricing</h3>
               <div className="space-y-2 text-sm text-slate-300">
                 <div className="flex justify-between">
-                  <span>• Keyring (4cm × 5cm):</span>
+                  <span>• Keyring (3.5cm × 4cm):</span>
                   <span className="font-semibold text-blue-400">€4</span>
                 </div>
                 <div className="flex justify-between">
@@ -256,11 +258,15 @@ Note: Delivery charge (€3) will be added to final price.
                   onChange={(e) => setFormData({ ...formData, size: e.target.value, addSong: e.target.value === 'keyring' ? false : formData.addSong })}
                   className="w-full bg-slate-900 border border-slate-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
+                  <option value="keyring">Keyring (3.5cm × 4cm) - €4</option>
+                  {/* Temporarily commented out
                   <option value="lithophane">Lithophane (15cm × 15cm) - €13</option>
-                  <option value="keyring">Keyring (4cm × 5cm) - €4</option>
+                  */}
+                  
                 </select>
               </div>
 
+              {/* Temporarily commented out - Spotify option only for lithophane
               {formData.size === 'lithophane' && (
                 <div>
                   <label className="flex items-center space-x-3 cursor-pointer">
@@ -279,6 +285,7 @@ Note: Delivery charge (€3) will be added to final price.
                   </p>
                 </div>
               )}
+              */}
 
               <div>
                 <label htmlFor="quantity" className="block text-sm font-medium text-slate-300 mb-2">
@@ -318,9 +325,7 @@ Note: Delivery charge (€3) will be added to final price.
                   <strong>Estimated Price:</strong>{' '}
                   €
                   {(
-                    (formData.size === 'keyring' ? 4 : 13) *
-                    parseInt(formData.quantity || '1') +
-                    (formData.addSong && formData.size === 'lithophane' ? 2 : 0)
+                    4 * parseInt(formData.quantity || '1')
                   ).toFixed(2)}
                 </p>
                 <p className="text-xs text-slate-500 mt-2">

@@ -13,6 +13,8 @@ export default function Home() {
   });
 
   const featuredProducts = data.products.filter((p) => p.featured);
+  const lithophaneKeyring = data.products.find((p) => p.id === 'prod-lithophane-keyring');
+  const customLithophane = data.products.find((p) => p.id === 'prod-lithophane');
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -110,78 +112,74 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Custom Lithophane Featured Card */}
-          <Link 
-            to="/custom-lithophane"
-            className="group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-          >
-            <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <svg className="w-20 h-20 mx-auto mb-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <div className="font-display text-4xl font-bold text-blue-400 mb-2">Custom</div>
-                  <div className="font-display text-2xl font-semibold text-indigo-400">Lithophane</div>
+          {customLithophane && (
+            <Link 
+              to="/custom-lithophane"
+              className="group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+                <img
+                  src={customLithophane.images[0]}
+                  alt={customLithophane.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-3 right-3">
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    ✨ NEW
+                  </span>
                 </div>
               </div>
-              <div className="absolute top-3 right-3">
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  ✨ NEW
-                </span>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                  {customLithophane.name}
+                </h3>
+                <p className="text-sm text-slate-400 mb-3">
+                  {customLithophane.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-blue-400 font-bold">From €{customLithophane.price}</span>
+                  <span className="text-sm text-blue-400 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
+                    Customize Now →
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                Custom Photo Lithophane
-              </h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Transform your favorite photos into stunning 3D printed art pieces with backlighting
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-blue-400 font-bold">From €13</span>
-                <span className="text-sm text-blue-400 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
-                  Customize Now →
-                </span>
-              </div>
-            </div>
-          </Link>
+            </Link>
+          )}
 
           {/* Lithophane Keyring Featured Card */}
-          <Link 
-            to="/custom-lithophane"
-            className="group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300"
-          >
-            <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <svg className="w-20 h-20 mx-auto mb-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                  </svg>
-                  <div className="font-display text-3xl font-bold text-purple-400 mb-2">Lithophane</div>
-                  <div className="font-display text-2xl font-semibold text-pink-400">Keyring</div>
+          {lithophaneKeyring && (
+            <Link 
+              to="/custom-lithophane"
+              className="group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300"
+            >
+              <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+                <img
+                  src={lithophaneKeyring.images[0]}
+                  alt={lithophaneKeyring.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-3 right-3">
+                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    🔑 MINI
+                  </span>
                 </div>
               </div>
-              <div className="absolute top-3 right-3">
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  🔑 MINI
-                </span>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                  {lithophaneKeyring.name}
+                </h3>
+                <p className="text-sm text-slate-400 mb-3">
+                  {lithophaneKeyring.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-400 font-bold">Only €{lithophaneKeyring.price}</span>
+                  <span className="text-sm text-purple-400 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
+                    Order Now →
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                Lithophane Keyring
-              </h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Carry your memories everywhere! Compact lithophane keyring with your photo
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-purple-400 font-bold">Only €4</span>
-                <span className="text-sm text-purple-400 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
-                  Order Now →
-                </span>
-              </div>
-            </div>
-          </Link>
+            </Link>
+          )}
 
           {featuredProducts.slice(0, 4).map((product) => (
             <ProductCard key={product.id} product={product} />
