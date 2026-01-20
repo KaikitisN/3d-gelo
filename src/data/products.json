@@ -11,6 +11,12 @@
       "name": "Shoe Keyrings",
       "description": "Shoe keyrings featuring miniature versions of popular sneaker designs",
       "image": "images/products/af1-keyring.webp"
+    },
+    {
+      "slug": "seasonal-gifts",
+      "name": "Seasonal Gifts",
+      "description": "Special 3D printed gifts perfect for holidays and celebrations",
+      "image": "/images/products/IMG_3257.jpeg"
     }
   ],
   "_commentedProducts": [
@@ -123,6 +129,42 @@
       "rating": 0,
       "reviewCount": 0,
       "sku": "GD-AF1-001"
+    },
+    {
+      "id": "prod-003",
+      "name": "Valentine's Teddy Bear",
+      "description": "Adorable 3D printed teddy bear holding a red heart, perfect for Valentine's Day or as a thoughtful gift for someone special. This cute companion features detailed texture and a charming design that captures the spirit of love and affection.",
+      "categorySlug": "seasonal-gifts",
+      "price": 7.00,
+      "currency": "EUR",
+      "images": [
+        "/images/products/IMG_3257.jpeg",
+        "/images/products/IMG_3258.jpeg",
+        "/images/products/IMG_3259.jpeg",
+        "/images/products/IMG_3260.jpeg",
+        "/images/products/IMG_3261.jpeg"
+      ],
+      "featured": true,
+      "tags": ["valentine", "teddy bear", "gift", "seasonal", "romantic", "heart", "cute"],
+      "materialOptions": [
+        {
+          "id": "pla",
+          "name": "PLA",
+          "description": "Eco-friendly biodegradable plastic with smooth finish",
+          "priceModifier": 0
+        }
+      ],
+      "colorOptions": [
+        { "id": "beige-red", "name": "Beige Bear with Red Heart", "hexCode": "#d4a574", "priceModifier": 0 }
+      ],
+      "sizeOptions": [
+        { "id": "standard", "name": "Standard", "dimensions": "8cm x 6cm x 5cm", "priceModifier": 0 }
+      ],
+      "leadTimeDaysMin": 2,
+      "leadTimeDaysMax": 5,
+      "rating": 0,
+      "reviewCount": 0,
+      "sku": "GD-VTB-001"
     }
     
   ]
