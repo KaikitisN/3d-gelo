@@ -158,7 +158,7 @@
         { "id": "beige-red", "name": "Beige Bear with Red Heart", "hexCode": "#d4a574", "priceModifier": 0 }
       ],
       "sizeOptions": [
-        { "id": "standard", "name": "Standard", "dimensions": "8cm x 6cm x 5cm", "priceModifier": 0 }
+        { "id": "standard", "name": "Standard", "dimensions": "6cm x 4.5cm x 4.5cm", "priceModifier": 0 }
       ],
       "leadTimeDaysMin": 2,
       "leadTimeDaysMax": 5,
